@@ -100,10 +100,10 @@
                         <span class="cd-words-wrapper">
                            <b class="is-visible">the Burning Crusade</b>
                            <b>a progressive realm</b>
-                           <b>Fully scripted raids & dungeons</b>
+                           <b>Fully scripted raids/dungeons</b>
                            <b>Blizzlike content and rates</b>
-                           <b>Working battlegrounds & arena</b>
-						               <b>a fantastic community</b>
+                           <b>Working battlegrounds/arena</b>
+						   <b>a fantastic community</b>
                         </span>
                      </h4>
                   </section>
@@ -177,8 +177,8 @@
             <div class="row nopadding">
                    <div class="col-md-12 fullwidth padding-30 wow fadeInDown" style="margin-left: 30px; margin-bottom: -40px;" data-wow-delay="0.2s" data-wow-offset="10">
                       <div class="row nopadding" style="font-weight: bold; color: #303030;">
-                        <h4>Are you a core or database developer? Can you script events in ScriptDev2? Can you create and edit amazing videos? Want to be an in-game tester?
-                        <a class="apply" href="https://docs.google.com/forms/d/1HzKAPO8LLNtnHRp0NF9Vsc_ELztuAcpvfuJVM-yY0as/" target="_blank">Apply Now!</a></h4>
+                        <h4>Are you a core or database developer? Can you script events in ScriptDev2? Can you create and edit amazing videos? Want to be a Game Master?
+                        <a class="apply" href="http://forums.realtbc.com/index.php?threads/recruitment-information.31/#post-40" target="_blank">Apply Now!</a></h4>
                       </div>
                     </div>
                   </div>
@@ -197,20 +197,20 @@
                               <h5 class="font-accident-one-bold hovercolor uppercase">We're a team dedicated to bringing you TBC in it's finest form</h5>
                               <div class="dividewhite1"></div>
                               <p class="small">
-                                 Forged from the dreams of players from around the world, a community designed to deliver the most complete Burning Crusade server of all time, as it was back when it was playable. The development of RealTBC focuses on creating a stable, enjoyable, and completely Blizzlike Burning Crusade experience. With a progressive content release system in effect, raids and other content will be released as it happened during Burning Crusade's glory days. A server that cannot be rivaled by any other community. With a highly efficient and skillful development team we will focus on bringing the Outlands and all Burning Crusade content back to life and playable the way it once was. Join us as we continue to make history, every single day.
+                                 Forged from the dreams of players from around the world, a community driven to deliver the most complete Burning Crusade server of all time, as it was back when it was playable. The development of RealTBC focuses on creating a stable, enjoyable, and completely Blizzlike Burning Crusade experience. With the goal of a progressive content release system, raids and other content will be released as it happened during Burning Crusade's glory days. A server aiming to not be rivaled by any other community, with a highly efficient and skillful development team we will focus on bringing the Outlands and all of Burning Crusade content back to life and playable the way it once was. Join us as we continue to make history!
                               </p>
                            </div>
                              <div class="quote">
                               <h5 class="font-accident-one-bold hovercolor uppercase">What we strive to accomplish</h5>
                               <div class="dividewhite1"></div>
                               <p class="small">
-                                 At RealTBC, our development focuses on creating the utmost retail Burning Crusade experience ever. We will never ask for donations, but we will not turn them down either, as they help us continue to deliever a fantastic gaming experience. There will be no donation shop or vote shop. Players will have to play the game in order to obtain their gear. We will create a system that will allow players to obtain rare TCG Mounts such as the Swift Spectral Tiger. We also intend to implement an Anti-Cheat system that will make our realms enjoyable to play on, hacker free. With active Moderators and Game Masters working around the clock we will keep our Community a safe and enjoyable place to enjoy your favorite expansion and to enjoy the game with your friends.
+                                 At RealTBC, our development focuses on creating the utmost retail Burning Crusade experience ever. We will never ask for donations, but we will not turn them them away either, as they help us continue to deliver a fantastic gaming experience, there will be no donation shop or vote shop, players will have to play the game in order to obtain their gear. We will create a system that will allow players to obtain rare TCG Mounts such as the Swift Spectral Tiger. We also intend to implement an anti-cheat system that will make our realms enjoyable to play on, hacker free. With active moderators and game masters working around the clock we will keep our community a safe and enjoyable place to enjoy your favorite expansion with your friends.
                               </p>
                            </div>
                           <div class="quote">
                               <h5 class="font-accident-one-bold hovercolor uppercase">Our Plans</h5>
                               <div class="dividewhite1"></div>
-                              <p class="small"> At RealTBC's release players will be able to explore all of the content available during the Dark Portal Opens Event. Our first goal is to ensure that spells, talents, dungeons, raids, and quests work correctly for launch. With that said, we will be holding numerous open testing phases for players to help us with development of RealTBC. We plan on holding a pre-alpha, open alpha, pre-beta, and open beta in which any player will be able to login and play on our realm and help us obtain information on various exploits and bugs. Only certain Dungeons and Raids will be available at launch. We will than continue to implement a series of content releases that will enable players to face Archimonde, Illidan, and much more.</p>
+                              <p class="small"> At RealTBC's release, players will be able to explore all of the content available during the "Dark Portal Opens Event". Our first goal is to ensure that spells, talents, dungeons, raids, and quests work correctly for launch. With that said, we will be holding numerous open testing phases for players to help us with development of RealTBC. We plan on holding a pre-alpha, open alpha, pre-beta, and open beta in which any player will be able to login and play on our realm and help us obtain information on various exploits and bugs. Only certain dungeons and raids will be available at launch. We will then continue to implement a series of content releases that will enable players to face Archimonde, Illidan, and much more.</p>
                             </div>
                         </div>
                         <div class="divider-dynamic"></div>
@@ -243,13 +243,13 @@
                           	$n = ($i+1);
                           	print "\n"; 
                           	print '<h5 class="font-accident-one-bold hovercolor uppercase" style="margin-bottom: 5px;"><a href="' . $e_link . '">'. $e_title .'</a></h2>'."\n"; 
-                  			    print '<p class="date" style="margin: 0px;">'. str_replace('+0000', '', $e_pubDate) .'</p>'."\n"; 
+                  			print '<p class="date" style="margin: 0px;">'. str_replace('+0000', '', $e_pubDate) .'</p>'."\n"; 
                           	print '<p style="margin: 0px;"> <strong>By '. str_replace('invalid@example.com', '', $e_author) .'</strong></p>'."\n"; 
                           	print '<p class="small" style="margin-top: 5px; padding-bottom: 5px;">'. $description .'</p>'."\n"; 
 
                           	$i++; 
-                          	} 
-
+                          	}
+							
                           	?>
                       </div>
                     </div>
@@ -268,88 +268,88 @@
                <div class="row">
                   <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
-                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="85">
+                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="1">
                            <div></div>
                            <h4 class="font-accident-one-normal uppercase circle-one">Overall</h4>
                            <p class="small">
-                              
+                              TBD
                            </p>
                         </div>
                      </div>
                   </div>
                   <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
-                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="77">
+                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="1">
                            <div></div>
                            <h4 class="font-accident-one-normal uppercase circle-two">Raids</h4>
                            <p class="small">
-                              
+                              TBD
                            </p>
                         </div>
                      </div>
                   </div>
                   <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
-                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="75">
+                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="1">
                            <div></div>
                            <h4 class="font-accident-one-normal uppercase circle-three">Dungeons</h4>
                            <p class="small">
-                              
+                              TBD
                            </p>
                         </div>
                      </div>
                   </div>
                   <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
-                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="86">
+                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="1">
                            <div></div>
                            <h4 class="font-accident-one-normal uppercase circle-four">Battlegrounds</h4>
                            <p class="small">
-                             
+                             TBD
                            </p>
                         </div>
                      </div>
                   </div>
                     <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
-                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="92">
+                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="1">
                            <div></div>
                            <h4 class="font-accident-one-normal uppercase circle-five">Spells</h4>
                            <p class="small">
-                             
+                             TBD
                            </p>
                         </div>
                      </div>
                   </div>
                     <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
-                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="90">
+                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="1">
                            <div></div>
                            <h4 class="font-accident-one-normal uppercase circle-six">Talents</h4>
                            <p class="small">
-                              
+                              TBD
                            </p>
                         </div>
                      </div>
                   </div>
                     <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
-                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="80">
+                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="1">
                            <div></div>
                            <h4 class="font-accident-one-normal uppercase circle-seven">Quests</h4>
                            <p class="small">
-                             
+                             TBD
                            </p>
                         </div>
                      </div>
                   </div>
                   <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
-                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="95">
+                        <div class="circle font-accident-one-normal fontcolor-invert" data-percent="1">
                            <div></div>
                            <h4 class="font-accident-one-normal uppercase circle-eight">Professions</h4>
                            <p class="small">
-                             
+                             TBD
                            </p>
                         </div>
                      </div>
@@ -430,7 +430,7 @@
             <a class="uppercase" href="index.html">Home</a>
             <a class="uppercase" href="#openModal">Forum</a>
             <a class="uppercase" href="https://discord.gg/0xjzBRRX756aJzQc">Discord</a>
-            <a class="uppercase" href="http://bugs.realtbc.com:8080/projects/REAL/issues/REAL-1?filter=allopenissues">Bug Tracker</a>
+            <a class="uppercase" href="https://github.com/antisocial89/RealTBC_Issue_tracker/issues">Bug Tracker</a>
             <a class="uppercase" href="#openModal">Connect</a>
             <a class="uppercase" href="#openModal">Support</a>
             <div class="divider-dynamic"></div>
