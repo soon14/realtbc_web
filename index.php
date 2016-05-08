@@ -152,7 +152,7 @@
                   <a href="http://forums.realtbc.com" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-profile5"></i><span>Forum</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="https://discord.gg/0xjzBRRX756aJzQc" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-earphones18"></i><span>Discord</span></a>
+                  <a href="https://discord.gg/0xjzBRRX754v5hLp" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-earphones18"></i><span>Discord</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
                   <a href="https://github.com/antisocial89/RealTBC_Issue_tracker/issues" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
