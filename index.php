@@ -155,7 +155,7 @@
                   <a href="https://discord.gg/0xjzBRRX756aJzQc" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-earphones18"></i><span>Discord</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="http://bugs.realtbc.com:8080/projects/REAL/issues/REAL-1?filter=allopenissues" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
+                  <a href="https://github.com/antisocial89/RealTBC_Issue_tracker/issues" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
                   <a href="#openModal" class="hvr-sweep-to-bottom"><i class="flaticon-arrows-4"></i><span>Connect</span></a>
