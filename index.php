@@ -1,3 +1,27 @@
+<?php
+  /**
+   * Index
+   *
+   * @package Membership Manager Pro
+   * @author wojoscripts.com
+   * @copyright 2015
+   * @version $Id: index.php, v3.00 2015-03-10 10:12:05 gewa Exp $
+   */
+  define("_VALID_PHP", true);
+  require_once("init.php");
+  
+  if ($user->logged_in)
+      redirect_to(SITEURL . "/account.php");
+	  
+  if (isset($_POST['doLogin']))
+      : $result = $user->login($_POST['username'], $_POST['password']);
+  
+  /* Login Successful */
+  if ($result)
+      : redirect_to("account.php");
+  endif;
+  endif;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!--[if IE 9]>
@@ -10,6 +34,10 @@
    <meta name=viewport content="width=device-width, initial-scale=1">
 
    <title>RealTBC - Home</title>
+   <script type="text/javascript">
+   var SITEURL = "<?php echo SITEURL; ?>";
+   var ADMINURL = "<?php echo ADMINURL; ?>";
+   </script>
    <link rel="icon" href="assets/custom/images/favicon.ico" sizes="16x16" type="image/png">
 
 	<meta name="description" content="RealTBC Private Server - Start at level 60, a full set of level gear, epic mount, and all skills. Join and enjoy a 'real' TBC experience!">
@@ -23,6 +51,7 @@
    <link href="assets/vendor/hover/css/hover-min.css"                property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
    <link href="assets/vendor/wow/animate.css"                        property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
    <link href="assets/vendor/mfp/css/magnific-popup.css"             property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+   <link rel="stylesheet" href="theme/css/message.css" type="text/css" />
    <!-- Remove this for disable demo panel styles -->
    <!--<link href="assets/vendor/styleselector/styleselector.css"        property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>-->
    <!-- Custom styles -->
@@ -61,7 +90,7 @@
 <header>
 
    <section id="top-navigation" class="container-fluid nopadding">
-   <img style="width: 1220px;" src="./assets/custom/images/banner.jpg" />
+   <img src="./assets/custom/images/banner.jpg" />
    </section>
 
    <section id="top-navigation" class="container-fluid nopadding">
@@ -100,10 +129,10 @@
                         <span class="cd-words-wrapper">
                            <b class="is-visible">the Burning Crusade</b>
                            <b>a progressive realm</b>
-                           <b>Fully scripted raids/dungeons</b>
+                           <b>Fully scripted raids & dungeons</b>
                            <b>Blizzlike content and rates</b>
-                           <b>Working battlegrounds/arena</b>
-						   <b>a fantastic community</b>
+                           <b>Working battlegrounds & arena</b>
+						               <b>a fantastic community</b>
                         </span>
                      </h4>
                   </section>
@@ -120,13 +149,13 @@
                   <a href="http://realtbc.com" class="hvr-sweep-to-bottom"><i class="flaticon-insignia"></i><span>home</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="http://forums.realtbc.com" class="hvr-sweep-to-bottom"><i class="flaticon-profile5"></i><span>Forum</span></a>
+                  <a href="http://forums.realtbc.com" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-profile5"></i><span>Forum</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="https://discord.gg/0xjzBRRX757d3fg6" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-earphones18"></i><span>Discord</span></a>
+                  <a href="https://discord.gg/0xjzBRRX756aJzQc" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-earphones18"></i><span>Discord</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="https://github.com/antisocial89/RealTBC_Issue_tracker/issues" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
+                  <a href="http://bugs.realtbc.com:8080/projects/REAL/issues/REAL-1?filter=allopenissues" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
                   <a href="#openModal" class="hvr-sweep-to-bottom"><i class="flaticon-arrows-4"></i><span>Connect</span></a>
@@ -142,38 +171,82 @@
 			        	<h2 style="color: #555">We're sorry about that</h2>
 
 			        <p>RealTBC is still under heavy development. <strong>This feature is currently disabled.</strong></p>
-			        <p>We update our website frequently and can't wait to provide you all with the best TBC experience ever created!</p>
-                    <p>We have plans to have an open pre-alpha soon and you can help us during our development phase by playing on our realm!</p>
-                    <p>In the meantime, feel free to join us on our Community Forum, or on Discord.</p>
-                    <p class="modallink">Take me to the <a href="http://forums.realtbc.com">Community Forum</a>.</p>
-                    <p class="modallink">Invite me to <a href="https://discord.gg/0xjzBRRX757d3fg6" target="_blank">Discord</a>.</p>
+			        <p>We update our page frequently and can't wait to provide you all with the best TBC experience ever created!</p>
+                    <p>In the meantime, feel free to join us on our Community Forum.</p>
 			    </div>
 			</div>
             <!-- /Main Navigation -->
          </div>
 
-        <div class="col-md-5 col-lg-4 login-container" style="padding: 0px; height: 360px;">
-          <form class="login" action="" method="post">
-                <h3 style="color: #303030; margin: 10px auto; text-align: center;">Account Management</h3>
-                <label>Username</label>
-                <br />
-                <input required="required" type="text" id="username">
-                <label>Password</label>
-                <br />
-                <input required="required" type="password" id="password">
-                <br />
-                <input type="submit" value="Login">
-                <p>Forgot your password? <a href="#openModal">Recover it</a>.</p>
-                <p>Don't have an account? <a href="#openModal">Create one</a>.</p>
-            </form>
-        </div>
+        <div id="loginform" class="col-md-5 col-lg-4 login-container" style="padding-left:10px; padding-right:10px; height:360px;">
+          <form method="post" id="login_form" name="login_form"> 
+          <h3 style="color: #303030; margin: 5px auto; text-align: center;">Account Management</h3>
+          <label>Username</label>
+          <input name="username" placeholder="Username" type="text"> 
+          <br />
+          <label>Password</label>
+          <input name="password" placeholder="Password" type="password">  
+          <div class="clearfix"> 
+          <input name="submit" type="submit" value="Login">
+          </div> 
+          <input name="doLogin" type="hidden" value="1"> 
+          </form><br>
 
+          <p>Forgot your password? <a id="passreset">Recover it</a>.</p>
+          <p>Don't have an account? <a id="regnow">Create one</a>.</p>
+		  <?php print Filter::$showMsg;?>
+        </div>
+        <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:10px; padding-right:10px; height:360px;">
+            <form id="wojo_form" name="wojo_form" method="post">
+              <h3 style="color: #303030; margin: 5px auto; text-align: center;">Password Reset</h3>
+              <label>Username</label>
+              <input name="uname" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
+              <br />
+              <label>Email</label>
+              <input name="email" placeholder="<?php echo Core::$word->UR_EMAIL;?>" type="text">
+              <br />
+              <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append" />
+              <input name="captcha" placeholder="<?php echo Core::$word->UA_PASS_RTOTAL;?>" type="text">
+              <div class="clearfix"><br>
+              <button data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button"><?php echo Core::$word->UA_PASS_RSUBMIT;?></button>
+              </div>
+              <a id="backto"><?php echo Core::$word->UA_BLOGIN;?></a>
+              <input name="passReset" type="hidden" value="1">
+            </form>
+         </div>
+         <div id="regform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:10px; padding-right:10px; height:360px;">
+          <?php if(!$core->reg_allowed):?>
+          <?php echo Filter::msgSingleAlert(Core::$word->UA_NOMORE_REG);?>
+          <?php elseif($core->user_limit !=0 and $core->user_limit == countEntries(Users::uTable)):?>
+          <?php echo Filter::msgSingleAlert(Core::$word->UA_MAX_LIMIT);?>
+          <?php else:?>
+          <form id="wojo_form2" name="wojo_form" method="post">
+              <h3 style="color: #303030; margin: 5px auto; text-align: center;">Register an Account</h3>
+              <label>Username</label>
+              <input name="username" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
+              <br />
+              <label>Password</label>
+              <input name="pass" placeholder="<?php echo Core::$word->PASSWORD;?>" type="password">
+              <br />
+              <label>Email</label>
+              <input name="email" placeholder="<?php echo Core::$word->UR_EMAIL;?>" type="text">
+              <br />
+              <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append">
+              <input type="text" placeholder="<?php echo Core::$word->UA_REG_RTOTAL;?>" name="captcha">      
+            <div class="clearfix content-center">
+              <button data-url="/ajax/user.php" type="button" name="dosubmit2" class="wojo secondary button"><?php echo Core::$word->UA_REG_ACC;?></button>
+            </div>
+            <a id="backto2"><?php echo Core::$word->UA_BLOGIN;?></a>
+            <input name="doRegister" type="hidden" value="1">
+          </form>
+          <?php endif;?>
+        </div>
       </div>
    </section>
 
 </header>
 
-        <div class="col-md-12 nopadding">
+<div class="col-md-12 nopadding">
             <div class="row nopadding">
                    <div class="col-md-12 fullwidth padding-30 wow fadeInDown" style="margin-left: 30px; margin-bottom: -40px;" data-wow-delay="0.2s" data-wow-offset="10">
                       <div class="row nopadding" style="font-weight: bold; color: #303030;">
@@ -455,8 +528,6 @@
 </footer>
 </div>
 
-</div>
-
 <div id="image-cache" class="hidden"></div>
 
 <!-- JS -->
@@ -474,7 +545,30 @@
 <!--<script src="assets/vendor/styleselector/styleselector.js"           type="text/javascript"></script>-->
 <!-- Custom scripts -->
 <script src="assets/custom/js/custom.js"                             type="text/javascript"></script>
-
+<script src="assets/js/global.js"></script>
+<script src="theme/js/master.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function () {
+    $('#backto').click(function () {
+        $("#passform").slideUp("slow");
+        $("#loginform").slideDown("slow");
+    });
+	$('#backto2').click(function () {
+        $("#regform").slideUp("slow");
+        $("#loginform").slideDown("slow");
+    });
+    $('#passreset').click(function () {
+        $("#loginform").slideUp("slow");
+        $("#passform").slideDown("slow");
+    });
+	$('#regnow').click(function () {
+        $("#loginform").slideUp("slow");
+        $("#regform").slideDown("slow");
+    });
+});
+// ]]>
+</script>
 </body>
 
 </html>
