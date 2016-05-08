@@ -90,7 +90,7 @@
 <header>
 
    <section id="top-navigation" class="container-fluid nopadding">
-   <img style="width:1230px;" src="./assets/custom/images/banner.jpg" />
+   <img style="width:1220px;" src="./assets/custom/images/banner.jpg" />
    </section>
 
    <section id="top-navigation" class="container-fluid nopadding">
