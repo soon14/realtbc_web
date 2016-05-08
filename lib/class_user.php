@@ -469,7 +469,6 @@
                           '[URL]'), array(
                           $data['username'],
                           $pass,
-                          $data['fname'] . ' ' . $data['lname'],
                           Registry::get("Core")->site_name,
                           SITEURL), $row->body);
 
@@ -540,11 +539,14 @@
               }
 
               $userpass = getValueById("password", self::uTable, $this->uid);
+			  $usern = getValueById("username", self::uTable, $this->uid);
 
               if ($_POST['password'] != "") {
-                  $data['password'] = sha1($_POST['password']);
-              } else
+				  $ucpass=strtoupper($_POST['password']);
+				  $data['password'] = sha1($usern.':'.$ucpass);
+              } else {
                   $data['password'] = $userpass;
+              }
 
 			  $fl_array = array_key_exists_wildcard($_POST, 'custom_*', 'key-value');
 			  if (isset($fl_array)) {
@@ -590,7 +592,7 @@
 
 		  Filter::checkPost('username', Core::$word->UR_USERNAME_R);
 	
-		  if ($value = $this->usernameExists($_POST['username'])) {
+		  if ($value = $this->usernameExists(strtoupper($_POST['username']))) {
 			  if ($value == 1)
 				  Filter::$msgs['username'] = Core::$word->UR_USERNAME_R1;
 			  if ($value == 2)
@@ -602,8 +604,6 @@
 
           if (strlen($_POST['pass']) < 6)
               Filter::$msgs['pass'] = Core::$word->UR_PASSWORD_R1;
-          elseif (!preg_match("/^.*(?=.{6,})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).*$/", ($_POST['pass'] = trim($_POST['pass']))))
-              Filter::$msgs['pass'] = Core::$word->UR_PASSWORD_R2;
 
 		  Filter::checkPost('email', Core::$word->UR_EMAIL_R);
 	
@@ -633,7 +633,7 @@
               }
 
               $data = array(
-                  'username' => sanitize($_POST['username']),
+                  'username' => sanitize(strtoupper($_POST['username'])),
                   'password' => sha1($_POST['pass']),
                   'email' => sanitize($_POST['email']),
                   'token' => $token,
@@ -1084,7 +1084,7 @@
       private function usernameExists($username)
       {
 
-          $username = sanitize($username);
+          $username = sanitize(strtoupper($username));
           if (strlen(self::$db->escape($username)) < 4)
               return 1;
 

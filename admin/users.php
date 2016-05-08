@@ -216,7 +216,7 @@
         <div class="field">
           <label><?php echo Core::$word->PASSWORD;?></label>
           <div class="wojo left labeled icon input">
-            <input type="text" placeholder="<?php echo Core::$word->PASSWORD;?>" name="password">
+            <input type="password" placeholder="<?php echo Core::$word->PASSWORD;?>" name="password">
             <div class="wojo corner label"> <i class="icon asterisk"></i> </div>
           </div>
         </div>

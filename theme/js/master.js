@@ -62,6 +62,36 @@ $(document).ready(function() {
 
 		$('#wojo_form').ajaxForm(options).submit();
 	});
+	$('body').on('click', 'button[name=dosubmit2], .dosubmit', function() {
+		var $parent = ($(this).is("button")) ? $(this).closest('.wojo.form') : $('.messi-content').find('.wojo.form');
+		var posturl = $(this).data('url');
+
+		function showResponse(json) {
+			$($parent).removeClass("loading");
+			$.sticky(decodeURIComponent(json.message), {
+				autoclose: 12000,
+				type: json.type,
+				title: json.title
+			});
+			if(json.type == "success"){
+				$parent.trigger("reset");
+			}
+		}
+
+		function showLoader() {
+			$($parent).addClass("loading");
+		}
+		var options = {
+			target: null,
+			beforeSubmit: showLoader,
+			success: showResponse,
+			type: "post",
+			url: SITEURL + posturl,
+			dataType: 'json'
+		};
+
+		$('#wojo_form2').ajaxForm(options).submit();
+	});
 
 	
 	
