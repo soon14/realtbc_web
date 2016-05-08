@@ -28,27 +28,10 @@
       <div class="screen-80 tablet-90 phone-100 push-center">
         <div id="logtabs" class="wtabs">
           <ul class="wojo tabs">
-            <? if ($pcheck==1) { ?><li><a data-tab="#bmemb"><?php echo Core::$word->UA_SUBTITLE6;?></a></li><? } ?>
+            
             <li><a data-tab="#account"><?php echo Core::$word->UA_SUBTITLE1;?></a></li>
           </ul>
           <div class="wojo form">
-           <? if ($pcheck==1) { ?>
-           <div id="bmemb" class="wojo tab data">
-            <?php if($listpackrow):?>
-            <div id="show-result"> </div>
-            <?php $color = array("468592","4a579b","814a9b","9c4a69","4b9c52","879b4a","9a804a","468592","4a579b","814a9b","9c4a69","4b9c52","879b4a","9a804a");?>
-            <ul id="plans" class="relative">
-              <?php foreach ($listpackrow as $i => $prow):?>
-              <li class="plan">
-                <h2><?php echo $prow->title;?></h2>
-                <p class="price alt" style="background:#<?php echo $color[$i];?>"><?php echo $core->formatMoney($prow->price);?> <span><?php echo $prow->days?> Points</span></p>
-                <p class="pbutton"><a class="add-cart" data-id="<?php echo $prow->id;?>" data-price="<?php echo $prow->price;?>"><?php echo ($prow->price <> 0) ? Core::$word->UA_BUY : Core::$word->UA_ACTIVATE;?></a></p>
-              </li>
-              <?php endforeach;?>
-            </ul>
-            <?php endif;?>
-            </div>
-            <? } ?>
             <div id="account" class="wojo tab data">
               <form id="wojo_form" name="wojo_form" method="post">
                 Username
