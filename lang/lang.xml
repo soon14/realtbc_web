@@ -236,7 +236,7 @@
   <phrase section="Accounts" data="UA_LOGINNOW">Login Now</phrase>			
   <phrase section="Accounts" data="UA_MAX_LIMIT">We are sorry, maximum number of registered users have been reached.</phrase>			
   <phrase section="Accounts" data="UA_NO_MEMBERSHIP">No Membership</phrase>			
-  <phrase section="Accounts" data="UA_NOMORE_REG">We are sorry, at this point we do not accept any more registrations.</phrase>			
+  <phrase section="Accounts" data="UA_NOMORE_REG">Website account creation is currently disabled. Please join us on Discord and PM an Admin for a testing account!</phrase>			
   <phrase section="Accounts" data="UA_P_SUMMARY">Purchase Summary</phrase>
   <phrase section="Accounts" data="UA_P_PAYWITH">Pay With</phrase>			
   <phrase section="Accounts" data="UA_PASS_R_ERR">There was an error during the process. Please contact the administrator.</phrase>			
