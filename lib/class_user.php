@@ -806,7 +806,7 @@
 
               $user = $this->getUserInfo($_POST['uname']);
               $randpass = $this->getUniqueCode(12);
-              $newpass = sha1($randpass);
+              $newpass = sha1(strtoupper($_POST['uname']).":".strtoupper($randpass));
 
               $data['password'] = $newpass;
 
