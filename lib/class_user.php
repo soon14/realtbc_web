@@ -631,10 +631,10 @@
               } else {
                   $active = "y";
               }
-
+              
               $data = array(
                   'username' => sanitize(strtoupper($_POST['username'])),
-                  'password' => sha1($_POST['pass']),
+                  'password' => sha1(strtoupper($_POST['pass']).":".strtoupper($_POST['username'])),
                   'email' => sanitize($_POST['email']),
                   'token' => $token,
                   'active' => $active,
