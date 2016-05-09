@@ -18,7 +18,7 @@
 	 define('DB_SERVER', '10.0.0.3'); 
 	 define('DB_USER', 'mcs'); 
 	 define('DB_PASS', 's9F!@S2Bz6R94F%&d5'); 
-	 define('DB_DATABASE', 'realtbctest');
+	 define('DB_DATABASE', 'realmd');
  
 	/** 
 	* Show MySql Errors. 
