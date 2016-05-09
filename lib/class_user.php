@@ -244,7 +244,7 @@
           $row = self::$db->fetch($result);
           $upuser=strtoupper($username);
 		  $uppass=strtoupper($pass);
-		  $entered_pass = sha1($upuser.':'.$uppass);
+		  $entered_pass = strtoupper(sha1($upuser.':'.$uppass));
 
           switch ($row->active) {
               case "b":
@@ -406,7 +406,7 @@
               if ($_POST['password'] != "") {
                   $ucuser=strtoupper($_POST['username']);
 				  $ucpass=strtoupper($_POST['password']);
-				  $data['password'] = sha1($ucuser.':'.$ucpass);
+				  $data['password'] = strtoupper(sha1($ucuser.':'.$ucpass));
               } else {
                   $data['password'] = $userrow->password;
               }
@@ -450,7 +450,7 @@
                   if (isset($_POST['notify']) && intval($_POST['notify']) == 1) {
 					  if(Filter::$id) {
 						  $randpass = $this->getUniqueCode(12);
-						  $newpass = sha1($randpass);
+						  $newpass = strtoupper(sha1($randpass));
 						  $pass = $randpass;
 						  $pdata['password'] = $newpass;
 						  self::$db->update(self::uTable, $pdata, "id=" . Filter::$id);
@@ -543,7 +543,7 @@
 
               if ($_POST['password'] != "") {
 				  $ucpass=strtoupper($_POST['password']);
-				  $data['password'] = sha1($usern.':'.$ucpass);
+				  $data['password'] = strtoupper(sha1($usern.':'.$ucpass));
               } else {
                   $data['password'] = $userpass;
               }
@@ -634,7 +634,7 @@
               
               $data = array(
                   'username' => sanitize(strtoupper($_POST['username'])),
-                  'password' => sha1(strtoupper($_POST['pass']).":".strtoupper($_POST['username'])),
+                  'password' => strtoupper(sha1(strtoupper($_POST['pass']).":".strtoupper($_POST['username']))),
                   'email' => sanitize($_POST['email']),
                   'token' => $token,
                   'active' => $active,
@@ -806,7 +806,7 @@
 
               $user = $this->getUserInfo($_POST['uname']);
               $randpass = $this->getUniqueCode(12);
-              $newpass = sha1(strtoupper($_POST['uname']).":".strtoupper($randpass));
+              $newpass = strtoupper(sha1(strtoupper($_POST['uname']).":".strtoupper($randpass)));
 
               $data['password'] = $newpass;
 
