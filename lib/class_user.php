@@ -811,7 +811,7 @@
 			  $randpass = $this->getUniqueCode(12);
 			  $rpass2 = strtoupper($randpass);
 			  $untemp = strtoupper($_POST['uname']);
-              $newpass = strtoupper(sha1($untemp.":".$randpass));
+              $newpass = strtoupper(sha1($untemp.":".$rpass2));
 
               $data['password'] = $newpass;
 
