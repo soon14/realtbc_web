@@ -631,10 +631,11 @@
               } else {
                   $active = "y";
               }
-              
+              $reuser=strtoupper($_POST['username']);
+			  $repass=strtoupper($_POST['pass']);
               $data = array(
                   'username' => sanitize(strtoupper($_POST['username'])),
-                  'password' => strtoupper(sha1(strtoupper($_POST['pass']).":".strtoupper($_POST['username']))),
+                  'password' => strtoupper(sha1($reuser.':'.$repass)),
                   'email' => sanitize($_POST['email']),
                   'token' => $token,
                   'active' => $active,
