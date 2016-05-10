@@ -115,7 +115,7 @@
          <div class="col-md-7 col-lg-8 vc-name nopadding">
             <!-- Name-Position -->
             <div class="row nopadding name">
-               <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase">Download & Join the battle!</h2></div>
+               <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase">Download & Help Test!</h2></div>
                <div class="col-md-2 nopadding name-pdf">
                   <a href="#openModal" class="hvr-sweep-to-right"><i class="flaticon-download149" title="Download"></i></a>
                </div>
@@ -125,14 +125,12 @@
 
                   <section class="cd-intro">
                      <h4 class="cd-headline clip is-full-width font-accident-two-normal uppercase">
-                        <span>Join and experience </span>
+                        <span>Join and </span>
                         <span class="cd-words-wrapper">
-                           <b class="is-visible">the Burning Crusade</b>
-                           <b>a progressive realm</b>
-                           <b>Fully scripted raids & dungeons</b>
-                           <b>Blizzlike content and rates</b>
-                           <b>Working battlegrounds & arena</b>
-						               <b>a fantastic community</b>
+                           <b class="is-visible">Help us find bugs</b>
+                           <b>Find yourself a place with us</b>
+                           <b>Get to know the community</b>
+                           <b>help shape the future for TBC</b>
                         </span>
                      </h4>
                   </section>
@@ -194,6 +192,7 @@
 
           <p>Forgot your password? <a id="passreset">Recover it</a>.</p>
           <p>Don't have an account? <a id="regnow">Create one</a>.</p>
+          <p>set realmlist logon.realtbc.com</p>
 		  <?php print Filter::$showMsg;?>
         </div>
         <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:10px; padding-right:10px; height:360px;">
@@ -251,7 +250,7 @@
                    <div class="col-md-12 fullwidth padding-30 wow fadeInDown" style="margin-left: 30px; margin-bottom: -40px;" data-wow-delay="0.2s" data-wow-offset="10">
                       <div class="row nopadding" style="font-weight: bold; color: #303030;">
                         <h4>Are you a core or database developer? Can you script events in ScriptDev2? Can you create and edit amazing videos? Want to be a Game Master?
-                        <a class="apply" href="http://forums.realtbc.com/index.php?threads/recruitment-information.31/#post-40" target="_blank">Apply Now!</a></h4>
+                        <a class="apply" href="https://docs.google.com/forms/d/1HzKAPO8LLNtnHRp0NF9Vsc_ELztuAcpvfuJVM-yY0as/" target="_blank">Apply Now!</a></h4>
                       </div>
                     </div>
                   </div>
