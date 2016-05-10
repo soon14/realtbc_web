@@ -810,7 +810,7 @@
               
 			  $randpass = $this->getUniqueCode(12);
 			  $rpass2 = strtoupper($randpass);
-			  $untemp = strtoupper($_POST['uname']);
+			  $untemp = strtoupper($user->username);
               $newpass = strtoupper(sha1($untemp.":".$rpass2));
 
               $data['password'] = $newpass;
@@ -828,7 +828,7 @@
                   '[IP]',
                   '[SITE_NAME]'), array(
                   $user->username,
-                  $randpass,
+                  $rpass2,
                   SITEURL,
                   SITEURL,
                   $_SERVER['REMOTE_ADDR'],
