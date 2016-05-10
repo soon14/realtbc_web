@@ -543,7 +543,8 @@
 
               if ($_POST['password'] != "") {
 				  $ucpass=strtoupper($_POST['password']);
-				  $data['password'] = strtoupper(sha1($usern.':'.$ucpass));
+				  $usern2=strtoupper($usern);
+				  $data['password'] = strtoupper(sha1($usern2.':'.$ucpass));
               } else {
                   $data['password'] = $userpass;
               }
@@ -806,8 +807,11 @@
           if (empty(Filter::$msgs)) {
 
               $user = $this->getUserInfo($_POST['uname']);
-              $randpass = $this->getUniqueCode(12);
-              $newpass = strtoupper(sha1(strtoupper($_POST['uname']).":".strtoupper($randpass)));
+              
+			  $randpass = $this->getUniqueCode(12);
+			  $rpass2 = strtoupper($randpass);
+			  $untemp = strtoupper($_POST['uname']);
+              $newpass = strtoupper(sha1($untemp.":".$randpass));
 
               $data['password'] = $newpass;
 
