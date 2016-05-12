@@ -2279,19 +2279,29 @@ footer {
 
 /* above fixes 1px problem on chrome */
 
+.realmlist {
+	margin-top: 5px;
+	color: #259e33;
+	font-weight: bold;
+}
+
 .login-container {
   height: 100%;
   background-color: #fff;
 }
 
-.login p {
+#loginform p {
 	margin: 11px 0px -8px 0px;
 	text-align: center;
 	width: 100%;
 	font-size: 13.3px;
 }
 
-.login a {
+.backtofix {
+	 margin-top: 7px;
+}
+
+#backto {
 	font-family: "Dosis", sans-serif;	
 	margin: 4px 0px 4px 0px;
 	color: #259e33;
@@ -2300,7 +2310,43 @@ footer {
 	font-weight: 800;
 }
 
-.login a:hover {
+#backto:hover {
+	transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	color: #186820;
+	font-size: 16px;
+}
+
+#backto2 {
+	font-family: "Dosis", sans-serif;	
+	margin: 4px 0px 4px 0px;
+	color: #259e33;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+#backto2:hover {
+	transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	color: #186820;
+	font-size: 16px;
+}
+
+#loginform a {
+	font-family: "Dosis", sans-serif;	
+	margin: 4px 0px 4px 0px;
+	color: #259e33;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 800;
+}
+
+#loginform a:hover {
 	transition: all 0.5s ease 0s;
 	-o-transition: all 0.5s ease 0s;
 	-moz-transition: all 0.5s ease 0s;
@@ -2329,11 +2375,19 @@ input[type=submit] {
 	margin-top: 15px;
 	font-size: 15px;
 	font-weight: bold;
-	color: #297600;
+	color: #259e33;
 }
 
-input[type=text]:visited {
-	color: #297600;
+input[type=submit]:hover {
+	border: 1px solid #297600;
+}
+
+input[type=text]:hover {
+	border: 1px solid #297600;
+}
+
+input[type=password]:hover {
+	border: 1px solid #297600;
 }
 
 /* application */

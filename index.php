@@ -115,7 +115,7 @@
          <div class="col-md-7 col-lg-8 vc-name nopadding">
             <!-- Name-Position -->
             <div class="row nopadding name">
-               <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase">Download & Help Test!</h2></div>
+               <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase">Download & Help Us!</h2></div>
                <div class="col-md-2 nopadding name-pdf">
                   <a href="#openModal" class="hvr-sweep-to-right"><i class="flaticon-download149" title="Download"></i></a>
                </div>
@@ -127,8 +127,7 @@
                      <h4 class="cd-headline clip is-full-width font-accident-two-normal uppercase">
                         <span>Join and </span>
                         <span class="cd-words-wrapper">
-                           <b class="is-visible">Help us find bugs</b>
-                           <b>Find yourself a place with us</b>
+                           <b class="is-visible">Help us find bug and exploits</b>
                            <b>Get to know the community</b>
                            <b>help shape the future for TBC</b>
                         </span>
@@ -176,7 +175,7 @@
             <!-- /Main Navigation -->
          </div>
 
-        <div id="loginform" class="col-md-5 col-lg-4 login-container" style="padding-left:10px; padding-right:10px; height:360px;">
+        <div id="loginform" class="col-md-5 col-lg-4 login-container" style="padding-left:20px; padding-right:20px; height:360px;">
           <form method="post" id="login_form" name="login_form"> 
           <h3 style="color: #303030; margin: 5px auto; text-align: center;">Account Management</h3>
           <label>Username</label>
@@ -188,14 +187,13 @@
           <input name="submit" type="submit" value="Login">
           </div> 
           <input name="doLogin" type="hidden" value="1"> 
-          </form><br>
-
+          </form>
+		  <?php print Filter::$showMsg;?>
           <p>Forgot your password? <a id="passreset">Recover it</a>.</p>
           <p>Don't have an account? <a id="regnow">Create one</a>.</p>
-          <p>set realmlist logon.realtbc.com</p>
-		  <?php print Filter::$showMsg;?>
+          <p class="realmlist">set realmlist logon.realtbc.com</p>
         </div>
-        <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:10px; padding-right:10px; height:360px;">
+        <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:20px; padding-right:20px; height:360px;">
             <form id="wojo_form" name="wojo_form" method="post">
               <h3 style="color: #303030; margin: 5px auto; text-align: center;">Password Reset</h3>
               <label>Username</label>
@@ -206,21 +204,22 @@
               <br />
               <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append" />
               <input name="captcha" placeholder="<?php echo Core::$word->UA_PASS_RTOTAL;?>" type="text">
-              <div class="clearfix"><br>
-              <button data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button"><?php echo Core::$word->UA_PASS_RSUBMIT;?></button>
+              <div class="clearfix">
+              <input data-url="/ajax/user.php" type="submit" name="dosubmit" value="Recover Account"></input>
               </div>
-              <a id="backto"><?php echo Core::$word->UA_BLOGIN;?></a>
+              <div class="backtofix"><a id="backto"><?php echo Core::$word->UA_BLOGIN;?></a></div>
               <input name="passReset" type="hidden" value="1">
             </form>
          </div>
-         <div id="regform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:10px; padding-right:10px; height:360px;">
+         <div id="regform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:20px; padding-right:20px; height:360px;">
+          <h3 style="color: #303030; margin: 5px auto; text-align: center;">Create an Account</h3>
+          <!--
           <?php if(!$core->reg_allowed):?>
           <?php echo Filter::msgSingleAlert(Core::$word->UA_NOMORE_REG);?>
           <?php elseif($core->user_limit !=0 and $core->user_limit == countEntries(Users::uTable)):?>
           <?php echo Filter::msgSingleAlert(Core::$word->UA_MAX_LIMIT);?>
           <?php else:?>
           <form id="wojo_form2" name="wojo_form" method="post">
-              <h3 style="color: #303030; margin: 5px auto; text-align: center;">Register an Account</h3>
               <label>Username</label>
               <input name="username" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
               <br />
@@ -233,8 +232,12 @@
               <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append">
               <input type="text" placeholder="<?php echo Core::$word->UA_REG_RTOTAL;?>" name="captcha">      
             <div class="clearfix content-center">
-              <button data-url="/ajax/user.php" type="button" name="dosubmit2" class="wojo secondary button"><?php echo Core::$word->UA_REG_ACC;?></button>
-            </div>
+              <input data-url="/ajax/user.php" type="submit" name="dosubmit2" value="Create Account"></button>
+            </div>-->
+            <center>
+            	<p>Account Creation is currently disabled.</p>
+                <p>You will be able to create an account when we announce the open public Alpha.</p>
+            </center>
             <a id="backto2"><?php echo Core::$word->UA_BLOGIN;?></a>
             <input name="doRegister" type="hidden" value="1">
           </form>
