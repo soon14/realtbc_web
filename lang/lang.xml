@@ -90,7 +90,7 @@
   <phrase section="Global" data="SUBMIT">Submit</phrase>
   <phrase section="Global" data="SUCCESS">Success</phrase>
   <phrase section="Global" data="SYSERROR">An error occurred while processing this request. Please contact administrator.</phrase>
-  <phrase section="Global" data="SYSTEM_ERR">Please complete the following fields:</phrase>
+  <phrase section="Global" data="SYSTEM_ERR"></phrase>
   <phrase section="Global" data="SYSTEM_PROCCESS">Nothing to process.</phrase>
   <phrase section="Global" data="TO">To</phrase>
   <phrase section="Global" data="TOAMT">Total Amount</phrase>

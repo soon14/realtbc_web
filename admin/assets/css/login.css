@@ -174,19 +174,6 @@ button[name=submit]:hover {
   height: auto;
   padding: 1em;
   line-height: 1.33;
-  -webkit-transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
-  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 0.325em 0.325em 0.325em 0.325em;
-  -webkit-box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
-  background-color: #BD362F;
-  color: #FFFFFF;
-  opacity: 0.8;
 }
 .wojo.success.message {
   background-color: #51A351;
