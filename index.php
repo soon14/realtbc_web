@@ -213,7 +213,6 @@
          </div>
          <div id="regform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:20px; padding-right:20px; height:360px;">
           <h3 style="color: #303030; margin: 5px auto; text-align: center;">Create an Account</h3>
-          <!--
           <?php if(!$core->reg_allowed):?>
           <?php echo Filter::msgSingleAlert(Core::$word->UA_NOMORE_REG);?>
           <?php elseif($core->user_limit !=0 and $core->user_limit == countEntries(Users::uTable)):?>
@@ -233,11 +232,7 @@
               <input type="text" placeholder="<?php echo Core::$word->UA_REG_RTOTAL;?>" name="captcha">      
             <div class="clearfix content-center">
               <input data-url="/ajax/user.php" type="submit" name="dosubmit2" value="Create Account"></button>
-            </div>-->
-            <center>
-            	<p>Account Creation is currently disabled.</p>
-                <p>You will be able to create an account when we announce the open public Alpha.</p>
-            </center>
+            </div>
             <a id="backto2"><?php echo Core::$word->UA_BLOGIN;?></a>
             <input name="doRegister" type="hidden" value="1">
           </form>
