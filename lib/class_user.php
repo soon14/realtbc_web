@@ -407,9 +407,6 @@
                   $ucuser=strtoupper($_POST['username']);
 				  $ucpass=strtoupper($_POST['password']);
 				  $data['password'] = sha1($ucuser.':'.$ucpass);
-				  $data['session_key'] = "";
-				  $data['v'] = "";
-				  $data['s'] = "";
               } else {
                   $data['password'] = $userrow->password;
               }
@@ -457,9 +454,6 @@
 						  $utemp = strtoupper($_POST['username']);
 						  $pass = $randpass;
 						  $pdata['password'] = sha1($utemp.':'.$newpass);
-						  $pdata['session_key'] = "";
-				          $pdata['v'] = "";
-				          $pdata['s'] = "";
 						  self::$db->update(self::uTable, $pdata, "id=" . Filter::$id);
 					  } else {
 						  $pass = $_POST['password'];
@@ -552,9 +546,6 @@
 				  $ucpass=strtoupper($_POST['password']);
 				  $usern2=strtoupper($usern);
 				  $data['password'] = sha1($usern2.':'.$ucpass);
-				  $data['session_key'] = "";
-				  $data['v'] = "";
-				  $data['s'] = "";
               } else {
                   $data['password'] = $userpass;
               }
@@ -824,9 +815,7 @@
               $newpass = sha1($untemp.":".$rpass2);
 
               $data['password'] = $newpass;
-			  $data['session_key'] = "";
-			  $data['v'] = "";
-			  $data['s'] = "";
+
               self::$db->update(self::uTable, $data, "username = '" . $user->username . "'");
 
               require_once (BASEPATH . "lib/class_mailer.php");
