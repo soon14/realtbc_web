@@ -38,7 +38,7 @@
    var SITEURL = "<?php echo SITEURL; ?>";
    var ADMINURL = "<?php echo ADMINURL; ?>";
    </script>
-   <link rel="icon" href="assets/custom/images/favicon.ico" sizes="16x16" type="image/png">
+    <link rel="icon" href="assets/custom/images/favicon.ico" sizes="16x16" type="image/png">
 
 	<meta name="description" content="RealTBC Private Server - Start at level 60, a full set of level gear, epic mount, and all skills. Join and enjoy a 'real' TBC experience!">
 	<meta name="keywords" content="RealTBC, TBC, Burning Crusade, WoW, World of Warcraft, Private Server, Instant 60, Starting Gear, Epic Mount, Start With All Spells, Scripted Raids, Working Battlegrounds, Battlegrounds, BG, Battleground, Working Arenas, Arenas, Arena, Blizzlike, Blizzlike Content">
@@ -71,6 +71,14 @@
 
 </head>
 
+<img class="reallogo" src="assets/images/logo.png" alt="logo" />
+
+<div class="socialmedia">
+	<div class="inline-block"><a href="https://www.facebook.com/Realtbc-1634787043427455/" target="_blank"><img class="mediaicon hvr-grow" src="assets/images/social/fb.png" alt="" /></a></div>
+    <div class="inline-block"><a href="https://twitter.com/real_TBC" target="_blank"><img class="mediaicon hvr-grow" src="assets/images/social/twit.png" alt="" /></a></div>
+    <div class="inline-block"><a href="#!"><img class="mediaicon hvr-grow" src="assets/images/social/yt.png" alt="" /></a></div>
+</div>
+
 <body class="boxed">
 <div class="global">
 
@@ -87,194 +95,125 @@
 <!--Pre-Loader-->
 <div id="preloader"></div>
 
+<div id="regModal" class="modalDialog">
+			    <div>
+                	<a href="#close" title="Close" class="close">X</a>
+			        <h4 style="color: #555; text-align: center;">Account Management</h4>
+			        <div id="loginform" class="col-md-5 col-lg-4 login-container">
+          				<form method="post" id="login_form" name="login_form"> 
+          					<label>Username</label>
+         					<input name="username" placeholder="Username" type="text"> 
+          						<br />
+          					<label>Password</label>
+          					<input name="password" placeholder="Password" type="password">  
+         						<div class="clearfix"> 
+          					<input name="submit" type="submit" value="Login">
+          						</div> 
+          					<input name="doLogin" type="hidden" value="1"> 
+          				</form>
+		  					<?php print Filter::$showMsg;?>
+          					<p>Forgot your password? <a id="passreset">Recover it</a>.</p>
+          					<p class="realmlist">set realmlist logon.realtbc.com</p>
+			     	</div>
+				</div>
+            </div>
+            
+            <div id="createModal" class="modalDialog">
+			    <div>
+                	<a href="#close" title="Close" class="close">X</a>
+			        <h4 style="color: #555; text-align: center;">Account Creation</h4>
+			        <div id="loginform" class="col-md-5 col-lg-4 login-container">
+          					<p>Account Creation is currently disabled.</p>
+                            <p>We are currently recruiting Content Testers!</p>
+                            <p>If you're interested you can apply <a href="https://docs.google.com/forms/u/0/d/1P45mAbmOMt8HOEh68L7vx-KRYUZCA1EHLi--d2JUrgQ/" target="_blank">here</a>.</p>
+			     	</div>
+				</div>
+            </div>
+            
+            <div id="applyModal" class="modalDialog">
+			    <div>
+                	<a href="#close" title="Close" class="close">X</a>
+			        <h4 style="color: #555; text-align: center;">Join the Team</h4>
+			        <div id="loginform" class="col-md-5 col-lg-4 login-container">
+          				<form action="https://docs.google.com/forms/d/1HzKAPO8LLNtnHRp0NF9Vsc_ELztuAcpvfuJVM-yY0as/" target="_blank">
+    						<input type="submit" value="Developer Application">
+						</form>
+                        <form action="https://docs.google.com/forms/u/0/d/1P45mAbmOMt8HOEh68L7vx-KRYUZCA1EHLi--d2JUrgQ/" target="_blank">
+    						<input type="submit" value="Content Tester Application">
+						</form>
+                        <br>
+			     	</div>
+				</div>
+            </div>
+
 <header>
 
    <section id="top-navigation" class="container-fluid nopadding">
-   <img style="width:1220px;" src="./assets/custom/images/banner.jpg" />
-   </section>
-
-   <section id="top-navigation" class="container-fluid nopadding">
-      <div class="row nopadding ident e-bg-light-texture">
-
-         <!-- Photo 
-            <div class="col-md-5 col-lg-4 vc-photo">
-				      <form class="login" action="" method="post">
-                	<label>Username</label>
-                    <br>
-                    <input type="text" id="username">
-                    <label>Password</label>
-                    <br>
-                    <input type="password" id="password">
-                    <br>
-                    <input type="submit" value="Login">
-                    <p>Don't have an account? <a href="#">Create one.</a></p>
-                </form>
-            </div>-->
-         <!-- /Photo -->
-
-         <div class="col-md-7 col-lg-8 vc-name nopadding">
-            <!-- Name-Position -->
-            <div class="row nopadding name">
-               <div class="col-md-10 name-title"><h2 class="font-accident-two-light uppercase">Download & Help Us!</h2></div>
-               <div class="col-md-2 nopadding name-pdf">
-                  <a href="#openModal" class="hvr-sweep-to-right"><i class="flaticon-download149" title="Download"></i></a>
-               </div>
-            </div>
-            <div class="row nopadding position">
-               <div class="col-md-10 position-title">
-
-                  <section class="cd-intro">
-                     <h4 class="cd-headline clip is-full-width font-accident-two-normal uppercase">
-                        <span>Join and </span>
-                        <span class="cd-words-wrapper">
-                           <b class="is-visible">Help us find bug and exploits</b>
-                           <b>Get to know the community</b>
-                           <b>help shape the future for TBC</b>
-                        </span>
-                     </h4>
-                  </section>
-
-               </div>
-
-            </div>
-            <!-- /Name-Position -->
-
-            <!-- Main Navigation -->
-
-            <ul id="nav" class="row nopadding cd-side-navigation">
+			<nav>
+        <div class="col-md-12 nopadding">
+            <div class="col-md-9 nopadding">
+               <ul id="nav" class="row nopadding cd-side-navigation">
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="http://realtbc.com" class="hvr-sweep-to-bottom"><i class="flaticon-insignia"></i><span>home</span></a>
+                  <a href="http://realtbc.com" class="hvr-underline-from-center"><i class="flaticon-insignia"></i><span>home</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="http://forums.realtbc.com" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-profile5"></i><span>Forum</span></a>
+                  <a href="http://forums.realtbc.com" target="_blank" class="hvr-underline-from-center"><i class="flaticon-profile5"></i><span>Forum</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="https://discord.gg/0xjzBRRX754v5hLp" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-earphones18"></i><span>Discord</span></a>
+                  <a href="https://discord.gg/0xjzBRRX754v5hLp" target="_blank" class="hvr-underline-from-center"><i class="flaticon-earphones18"></i><span>Discord</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="https://github.com/antisocial89/RealTBC_Issue_tracker/issues" target="_blank" class="hvr-sweep-to-bottom"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
+                  <a href="https://github.com/antisocial89/RealTBC_Issue_tracker/issues" target="_blank" class="hvr-underline-from-center"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="#openModal" class="hvr-sweep-to-bottom"><i class="flaticon-arrows-4"></i><span>Connect</span></a>
+                  <a href="#openModal" class="hvr-underline-from-center"><i class="flaticon-arrows-4"></i><span>Connect</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="#openModal" class="hvr-sweep-to-bottom"><i class="flaticon-circle-5"></i><span>Support</span></a>
+                  <a href="http://realtbc.com/support" class="hvr-underline-from-center"><i class="flaticon-circle-5"></i><span>Support</span></a>
                </li>
             </ul>
-
-			<div id="openModal" class="modalDialog">
-			    <div>	<a href="#close" title="Close" class="close">X</a>
-
-			        	<h2 style="color: #555">We're sorry about that</h2>
-
-			        <p>RealTBC is still under heavy development. <strong>This feature is currently disabled.</strong></p>
-			        <p>We update our page frequently and can't wait to provide you all with the best TBC experience ever created!</p>
-                    <p>In the meantime, feel free to join us on our Community Forum.</p>
-			    </div>
-			</div>
-            <!-- /Main Navigation -->
-         </div>
-
-        <div id="loginform" class="col-md-5 col-lg-4 login-container" style="padding-left:20px; padding-right:20px; height:360px;">
-          <form method="post" id="login_form" name="login_form"> 
-          <h3 style="color: #303030; margin: 5px auto; text-align: center;">Account Management</h3>
-          <label>Username</label>
-          <input name="username" placeholder="Username" type="text"> 
-          <br />
-          <label>Password</label>
-          <input name="password" placeholder="Password" type="password">  
-          <div class="clearfix"> 
-          <input name="submit" type="submit" value="Login">
-          </div> 
-          <input name="doLogin" type="hidden" value="1"> 
-          </form>
-		  <?php print Filter::$showMsg;?>
-          <p>Forgot your password? <a id="passreset">Recover it</a>.</p>
-          <p>Don't have an account? <a id="regnow">Create one</a>.</p>
-          <p class="realmlist">set realmlist logon.realtbc.com</p>
         </div>
-        <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:20px; padding-right:20px; height:360px;">
-            <form id="wojo_form" name="wojo_form" method="post">
-              <h3 style="color: #303030; margin: 5px auto; text-align: center;">Password Reset</h3>
-              <label>Username</label>
-              <input name="uname" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
-              <br />
-              <label>Email</label>
-              <input name="email" placeholder="<?php echo Core::$word->UR_EMAIL;?>" type="text">
-              <br />
-              <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append" />
-              <input name="captcha" placeholder="<?php echo Core::$word->UA_PASS_RTOTAL;?>" type="text">
-              <div class="clearfix">
-              <button data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button">Recover Account</button>
-              </div>
-              <div class="backtofix"><a id="backto"><?php echo Core::$word->UA_BLOGIN;?></a></div>
-              <input name="passReset" type="hidden" value="1">
-            </form>
-         </div>
-         <div id="regform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:20px; padding-right:20px; height:360px;">
-          <h3 style="color: #303030; margin: 5px auto; text-align: center;">Create an Account</h3>
-          <?php if(!$core->reg_allowed):?>
-          <?php echo Filter::msgSingleAlert(Core::$word->UA_NOMORE_REG);?>
-          <?php elseif($core->user_limit !=0 and $core->user_limit == countEntries(Users::uTable)):?>
-          <?php echo Filter::msgSingleAlert(Core::$word->UA_MAX_LIMIT);?>
-          <?php else:?>
-          <form id="wojo_form2" name="wojo_form" method="post">
-              <label>Username</label>
-              <input name="username" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
-              <br />
-              <label>Password</label>
-              <input name="pass" placeholder="<?php echo Core::$word->PASSWORD;?>" type="password">
-              <br />
-              <label>Email</label>
-              <input name="email" placeholder="<?php echo Core::$word->UR_EMAIL;?>" type="text">
-              <br />
-              <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append">
-              <input type="text" placeholder="<?php echo Core::$word->UA_REG_RTOTAL;?>" name="captcha">      
-            <div class="clearfix content-center">
-              <button data-url="/ajax/user.php" type="button" name="dosubmit2" value="Create Account">Create Account</button>
+        	<div class="col-md-3 nopadding">
+            	<div class="register">
+            		<img class="regicon" src="assets/images/avatar.png" alt="" width="54px" height="54px" />
+                    <p class="loginto"><a href="#regModal">Login</a> to personalize your visit and enhance your experience.</p>
+                    <p class="loginlast">Don't have one? <a href="#createModal">Create One</a>.</p>
+                </div>
             </div>
-            <a id="backto2"><?php echo Core::$word->UA_BLOGIN;?></a>
-            <input name="doRegister" type="hidden" value="1">
-          </form>
-          <?php endif;?>
-        </div>
-      </div>
-   </section>
-
-</header>
-
-<div class="col-md-12 nopadding">
-            <div class="row nopadding">
-                   <div class="col-md-12 fullwidth padding-30 wow fadeInDown" style="margin-left: 30px; margin-bottom: -40px;" data-wow-delay="0.2s" data-wow-offset="10">
-                      <div class="row nopadding" style="font-weight: bold; color: #303030;">
-                        <h4>Are you a core or database developer? Can you script events in ScriptDev2? Can you create and edit amazing videos? Want to be a Game Master?
-                        <a class="apply" href="https://docs.google.com/forms/d/1HzKAPO8LLNtnHRp0NF9Vsc_ELztuAcpvfuJVM-yY0as/" target="_blank">Apply Now!</a></h4>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            
-          </body>
-
+    </div>
+        </nav>
+        
         <div class="col-md-12 nopadding">
             <div class="row nopadding">
+            <div class="row nopadding">
+                   <div class="col-md-9 wow fadeInDown" style="padding-left: 40px; padding-top:20px; visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;" data-wow-delay="0.2s" data-wow-offset="10">
+                      <div class="row nopadding" style="font-weight: bold; color: #303030;">
+                        <h4>Are you a Core or Database Developer? Can you script Dungeons and Raids? We are also recruiting Content Testers. Do you want to make a difference?</h4>
+                      </div>
+                    </div>
+                    <div class="col-md-3 wow fadeInDown">
+                        <form class="applybutton" action="#applyModal">
+    						<input type="submit" value="Apply Now">
+						</form>
+                    </div>
+                  </div>
                <div class="col-md-6 nopadding">
                   <div class="row nopadding">
-                     <div class="col-md-12 fullwidth padding-50 wow fadeInDown" data-wow-delay="0.2s" data-wow-offset="10">
+                     <div class="col-md-12 fullwidth padding-40 wow fadeInDown" data-wow-delay="0.2s" data-wow-offset="10">
                         <div class="row nopadding">
                            <h3 class="font-accident-two-normal uppercase" style="color: #303030;">About RealTBC</h3>
                            <div class="quote">
                               <h5 class="font-accident-one-bold hovercolor uppercase">We're a team dedicated to bringing you TBC in it's finest form</h5>
                               <div class="dividewhite1"></div>
                               <p class="small">
-                                 Forged from the dreams of players from around the world, a community driven to deliver the most complete Burning Crusade server of all time, as it was back when it was playable. The development of RealTBC focuses on creating a stable, enjoyable, and completely Blizzlike Burning Crusade experience. With the goal of a progressive content release system, raids and other content will be released as it happened during Burning Crusade's glory days. A server aiming to not be rivaled by any other community, with a highly efficient and skillful development team we will focus on bringing the Outlands and all of Burning Crusade content back to life and playable the way it once was. Join us as we continue to make history!
+                                 Forged from the dreams of players from around the world, a community driven to deliver the most complete Burning Crusade server of all time, as it was back when it was playable. The development of RealTBC focuses on creating a stable, enjoyable, and Blizzlike Burning Crusade experience. With a progressive content release system, raids and other content will be released as it happened during Burning Crusade's glory days. A realm that cannot be rivaled by any other community, with a highly efficient and skillful development team we will focus on bringing Outlands and all of Burning Crusade content back to life and playable the way it once was. Join us as we continue to make history!
                               </p>
                            </div>
                              <div class="quote">
                               <h5 class="font-accident-one-bold hovercolor uppercase">What we strive to accomplish</h5>
                               <div class="dividewhite1"></div>
                               <p class="small">
-                                 At RealTBC, our development focuses on creating the utmost retail Burning Crusade experience ever. We will never ask for donations, but we will not turn them them away either, as they help us continue to deliver a fantastic gaming experience, there will be no donation shop or vote shop, players will have to play the game in order to obtain their gear. We will create a system that will allow players to obtain rare TCG Mounts such as the Swift Spectral Tiger. We also intend to implement an anti-cheat system that will make our realms enjoyable to play on, hacker free. With active moderators and game masters working around the clock we will keep our community a safe and enjoyable place to enjoy your favorite expansion with your friends.
+                                 At RealTBC, our development focuses on creating the utmost retail Burning Crusade experience ever. We will never ask for donations, but we will not turn them them away either, as they help us continue to deliver a fantastic gaming experience. There will be no donation shop or vote shopa and players will have to play the game in order to obtain their gear. We will create a system that will allow players to obtain rare TCG Mounts such as the Swift Spectral Tiger. We also intend to implement an anti-cheat system that will make our realms enjoyable to play on, hacker free. With active moderators and game masters working around the clock we will keep our community a safe and enjoyable place to enjoy your favorite expansion with your friends.
                               </p>
                            </div>
                           <div class="quote">
@@ -290,9 +229,9 @@
 
 <!-- Container -->
 
-                <div class="col-md-6 nopadding ">
+                <div class="col-md-6 nopadding">
                   <div class="row nopadding">
-                    <div class="col-md-12 fullwidth padding-50 wow fadeInDown" data-wow-delay="0.2s" data-wow-offset="10">
+                    <div class="col-md-12 fullwidth padding-40 wow fadeInDown" data-wow-delay="0.2s" data-wow-offset="10">
                       <div class="row nopadding">
                         <h3 class="font-accident-two-normal uppercase" style="color: #303030;">Announcements</h3>
                         	<?php 
@@ -327,12 +266,10 @@
                 </div>
              </div>
           </div>
-      
+          
+          <div class="row nopadding">
 
-
-      <div class="row nopadding" style="background: #fff;">
-
-         <div class="col-md-12 circle-skills nopadding height-400" style="background: #fff;">
+         <div class="col-md-12 circle-skills nopadding height-400">
             <div class="padding-50 wow fadeInLeft" data-wow-delay="0.6s" data-wow-offset="5" style="margin-left: 50px;">
                <h3 class="font-accident-two-normal uppercase fontcolor-invert" style="text-align: center; margin-left: -55px;">Development Progress</h3>
                <div class="row">
@@ -428,10 +365,8 @@
             </div>
          </div>
    </section>
-</div>
-
-      <!-- Timeline Block -->
-      <section id="timeline-vertical" class="inner-section">
+   
+   <section id="timeline-vertical" class="inner-section">
 
          <div class="container-fluid nopadding timeline-background">
             <div class="dividewhite4"></div>
@@ -455,33 +390,33 @@
                <li class="timeline-inverted">
                   <div class="timeline-badge success"><i class="flaticon-arrows"></i></div>
                   <div class="timeline-panel wow fadeInRight" data-wow-delay="0.3s" data-wow-offset="10">
-                     <p class="timeline-time fontcolor-timeline" style="background: #888;"><i class="glyphicon glyphicon-time"></i> To be determined</p>
+                     <p class="timeline-time fontcolor-timeline"><i class="glyphicon glyphicon-time"></i> To be determined</p>
                      <div class="timeline-photo timeline-bg02-01"></div>
                      <div class="timeline-heading">
-                        <h3 class="font-accident-two-normal uppercase" style="color: #303030;">The Black Temple | Patch 2.1</h3>
-                        <h6 class="uppercase" style="color: #303030;">The Black Temple is the fortress-citadel of Illidan Stormrage, Lord of Outland. It was once known as the Temple of Karabor, and has changed hands many times over the generations.</h6>
+                        <h3 class="font-accident-two-normal uppercase">The Black Temple | Patch 2.1</h3>
+                        <h6 class="uppercase">The Black Temple is the fortress-citadel of Illidan Stormrage, Lord of Outland. It was once known as the Temple of Karabor, and has changed hands many times over the generations.</h6>
                      </div>
                   </div>
                </li>
                <li>
                   <div class="timeline-badge danger"><i class="flaticon-arrows"></i></div>
                   <div class="timeline-panel wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="10">
-                     <p class="timeline-time fontcolor-timeline" style="background: #888;"><i class="glyphicon glyphicon-time"></i> To be determined</p>
+                     <p class="timeline-time fontcolor-timeline"><i class="glyphicon glyphicon-time"></i> To be determined</p>
                      <div class="timeline-photo timeline-bg03-01"></div>
                      <div class="timeline-heading">
-                        <h3 class="font-accident-two-normal uppercase" style="color: #303030;">The Gods of Zul'Aman | Patch 2.3</h3>
-                        <h6 class="uppercase" style="color: #303030;">The stronghold of Zul'Aman has stood for millennia as the Amani trolls' seat of power and bastion of the fearless, cunning warlord Zul'jin.</h6>
+                        <h3 class="font-accident-two-normal uppercase">The Gods of Zul'Aman | Patch 2.3</h3>
+                        <h6 class="uppercase">The stronghold of Zul'Aman has stood for millennia as the Amani trolls' seat of power and bastion of the fearless, cunning warlord Zul'jin.</h6>
                      </div>
                   </div>
                </li>
                <li class="timeline-inverted info">
                   <div class="timeline-badge warning"><i class="flaticon-circle"></i></div>
                   <div class="timeline-panel wow fadeInRight" data-wow-delay="0.3s" data-wow-offset="10">
-                     <p class="timeline-time fontcolor-timeline" style="background: #888;"><i class="glyphicon glyphicon-time"></i> To be determined</p>
+                     <p class="timeline-time fontcolor-timeline"><i class="glyphicon glyphicon-time"></i> To be determined</p>
                      <div class="timeline-photo timeline-bg04-01"></div>
                      <div class="timeline-heading">
-                        <h3 class="font-accident-two-normal uppercase" style="color: #303030;">Fury of the Sunwell | Patch 2.4</h3>
-                        <h6 class="uppercase" style="color: #303030;">The glorious fount of arcane energy known as the Sunwell empowered the high elves for millennia, until the death knight Arthas laid siege to the elven kingdom and corrupted its sacred energies. Seeing no other alternative, a band of survivors led by Prince Kael'thas destroyed the ancient fount. Over time the surviving elves fell prey to a crippling magical withdrawal.</h6>
+                        <h3 class="font-accident-two-normal uppercase">Fury of the Sunwell | Patch 2.4</h3>
+                        <h6 class="uppercase">The glorious fount of arcane energy known as the Sunwell empowered the high elves for millennia, until the death knight Arthas laid siege to the elven kingdom and corrupted its sacred energies. Seeing no other alternative, a band of survivors led by Prince Kael'thas destroyed the ancient fount. Over time the surviving elves fell prey to a crippling magical withdrawal.</h6>
                      </div>
                   </div>
                </li>
@@ -490,8 +425,8 @@
          </div>
 
       </section>
-      <!-- /Timeline Block -->
-<footer class="padding-50">
+      
+      <footer class="padding-50" style="background: #fff;">
    <div class="container-fluid nopadding">
       <div class="row wow fadeInDown" data-wow-delay=".2s" data-wow-offset="10">
          <div class="col-md-6 cv-link">
@@ -523,7 +458,14 @@
       </div>
    </div>
 </footer>
+   
 </div>
+
+</header>
+
+</div>
+
+</body>
 
 <div id="image-cache" class="hidden"></div>
 
