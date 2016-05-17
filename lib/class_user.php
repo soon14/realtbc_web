@@ -244,7 +244,7 @@
           $row = self::$db->fetch($result);
           $upuser=strtoupper($username);
 		  $uppass=strtoupper($pass);
-		  $entered_pass = strtoupper(sha1($upuser.':'.$uppass));
+		  $entered_pass = sha1($upuser.':'.$uppass);
 
           switch ($row->active) {
               case "b":
@@ -406,7 +406,7 @@
               if ($_POST['password'] != "") {
                   $ucuser=strtoupper($_POST['username']);
 				  $ucpass=strtoupper($_POST['password']);
-				  $data['password'] = strtoupper(sha1($ucuser.':'.$ucpass));
+				  $data['password'] = sha1($ucuser.':'.$ucpass);
               } else {
                   $data['password'] = $userrow->password;
               }
@@ -450,9 +450,10 @@
                   if (isset($_POST['notify']) && intval($_POST['notify']) == 1) {
 					  if(Filter::$id) {
 						  $randpass = $this->getUniqueCode(12);
-						  $newpass = strtoupper(sha1($randpass));
+						  $newpass = strtoupper($randpass);
+						  $utemp = strtoupper($_POST['username']);
 						  $pass = $randpass;
-						  $pdata['password'] = $newpass;
+						  $pdata['password'] = sha1($utemp.':'.$newpass);
 						  self::$db->update(self::uTable, $pdata, "id=" . Filter::$id);
 					  } else {
 						  $pass = $_POST['password'];
@@ -544,7 +545,7 @@
               if ($_POST['password'] != "") {
 				  $ucpass=strtoupper($_POST['password']);
 				  $usern2=strtoupper($usern);
-				  $data['password'] = strtoupper(sha1($usern2.':'.$ucpass));
+				  $data['password'] = sha1($usern2.':'.$ucpass);
               } else {
                   $data['password'] = $userpass;
               }
@@ -636,7 +637,7 @@
 			  $repass=strtoupper($_POST['pass']);
               $data = array(
                   'username' => sanitize(strtoupper($_POST['username'])),
-                  'password' => strtoupper(sha1($reuser.':'.$repass)),
+                  'password' => sha1($reuser.':'.$repass),
                   'email' => sanitize($_POST['email']),
                   'token' => $token,
                   'active' => $active,
@@ -811,7 +812,7 @@
 			  $randpass = $this->getUniqueCode(12);
 			  $rpass2 = strtoupper($randpass);
 			  $untemp = strtoupper($user->username);
-              $newpass = strtoupper(sha1($untemp.":".$rpass2));
+              $newpass = sha1($untemp.":".$rpass2);
 
               $data['password'] = $newpass;
 
