@@ -1,7 +1,7 @@
+
 <?php 
 	/** 
 	* Configuration
-
 	* @package Membership Manager Pro
 	* @author wojocms.com
 	* @copyright 2011
@@ -15,10 +15,10 @@
 	* Database Constants - these constants refer to 
 	* the database configuration settings. 
 	*/
-	 define('DB_SERVER', '10.0.0.3'); 
-	 define('DB_USER', 'mcs'); 
-	 define('DB_PASS', 's9F!@S2Bz6R94F%&d5'); 
-	 define('DB_DATABASE', 'realmd');
+	 define('DB_SERVER', '127.0.0.1'); 
+	 define('DB_USER', 'root'); 
+	 define('DB_PASS', 'Wbgosu123!'); 
+	 define('DB_DATABASE', 'realtbc');
  
 	/** 
 	* Show MySql Errors. 
