@@ -205,7 +205,7 @@
               <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append" />
               <input name="captcha" placeholder="<?php echo Core::$word->UA_PASS_RTOTAL;?>" type="text">
               <div class="clearfix">
-              <input data-url="/ajax/user.php" type="submit" name="dosubmit" value="Recover Account"></input>
+              <button data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button">Recover Account</button>
               </div>
               <div class="backtofix"><a id="backto"><?php echo Core::$word->UA_BLOGIN;?></a></div>
               <input name="passReset" type="hidden" value="1">
