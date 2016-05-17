@@ -231,7 +231,7 @@
               <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append">
               <input type="text" placeholder="<?php echo Core::$word->UA_REG_RTOTAL;?>" name="captcha">      
             <div class="clearfix content-center">
-              <input data-url="/ajax/user.php" type="submit" name="dosubmit2" value="Create Account"></button>
+              <button data-url="/ajax/user.php" type="button" name="dosubmit2" value="Create Account">Create Account</button>
             </div>
             <a id="backto2"><?php echo Core::$word->UA_BLOGIN;?></a>
             <input name="doRegister" type="hidden" value="1">
