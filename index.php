@@ -115,6 +115,24 @@
           					<p>Forgot your password? <a id="passreset">Recover it</a>.</p>
           					<p class="realmlist">set realmlist logon.realtbc.com</p>
 			     	</div>
+                    <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:10px; padding-right:10px; height:360px;">
+                    <form id="wojo_form" name="wojo_form" method="post">
+                    <h3 style="color: #303030; margin: 5px auto; text-align: center;">Password Reset</h3>
+                    <label>Username</label>
+                    <input name="uname" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
+                    <br />
+                    <label>Email</label>
+                    <input name="email" placeholder="<?php echo Core::$word->UR_EMAIL;?>" type="text">
+                    <br />
+                    <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append" />
+                    <input name="captcha" placeholder="<?php echo Core::$word->UA_PASS_RTOTAL;?>" type="text">
+                    <div class="clearfix"><br>
+                    <button data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button"><?php echo Core::$word->UA_PASS_RSUBMIT;?></button>
+                    </div>
+                    <a id="backto"><?php echo Core::$word->UA_BLOGIN;?></a>
+                    <input name="passReset" type="hidden" value="1">
+                    </form>
+                    </div>
 				</div>
             </div>
             
@@ -123,9 +141,30 @@
                 	<a href="#close" title="Close" class="close">X</a>
 			        <h4 style="color: #555; text-align: center;">Account Creation</h4>
 			        <div id="loginform" class="col-md-5 col-lg-4 login-container">
-          					<p>Account Creation is currently disabled.</p>
-                            <p>We are currently recruiting Content Testers!</p>
-                            <p>If you're interested you can apply <a href="https://docs.google.com/forms/u/0/d/1P45mAbmOMt8HOEh68L7vx-KRYUZCA1EHLi--d2JUrgQ/" target="_blank">here</a>.</p>
+          					<?php if(!$core->reg_allowed):?>
+                            <?php echo Filter::msgSingleAlert(Core::$word->UA_NOMORE_REG);?>
+                            <?php elseif($core->user_limit !=0 and $core->user_limit == countEntries(Users::uTable)):?>
+                            <?php echo Filter::msgSingleAlert(Core::$word->UA_MAX_LIMIT);?>
+                            <?php else:?>
+                            <form id="wojo_form2" name="wojo_form" method="post">
+                            <h3 style="color: #303030; margin: 5px auto; text-align: center;">Register an Account</h3>
+                            <label>Username</label>
+                            <input name="username" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
+                            <br />
+                            <label>Password</label>
+                            <input name="pass" placeholder="<?php echo Core::$word->PASSWORD;?>" type="password">
+                            <br />
+                            <label>Email</label>
+                            <input name="email" placeholder="<?php echo Core::$word->UR_EMAIL;?>" type="text">
+                            <br />
+                            <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append">
+                            <input type="text" placeholder="<?php echo Core::$word->UA_REG_RTOTAL;?>" name="captcha">      
+                            <div class="clearfix content-center">
+                            <button data-url="/ajax/user.php" type="button" name="dosubmit2" class="wojo secondary button"><?php echo Core::$word->UA_REG_ACC;?></button>
+                            </div>
+                            <input name="doRegister" type="hidden" value="1">
+                            </form>
+                            <?php endif;?>
 			     	</div>
 				</div>
             </div>
@@ -491,10 +530,6 @@
 $(document).ready(function () {
     $('#backto').click(function () {
         $("#passform").slideUp("slow");
-        $("#loginform").slideDown("slow");
-    });
-	$('#backto2').click(function () {
-        $("#regform").slideUp("slow");
         $("#loginform").slideDown("slow");
     });
     $('#passreset').click(function () {
