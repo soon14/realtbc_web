@@ -152,7 +152,6 @@
                             <?php echo Filter::msgSingleAlert(Core::$word->UA_MAX_LIMIT);?>
                             <?php else:?>
                             <form id="wojo_form2" name="wojo_form" method="post">
-                            <h3 style="color: #303030; margin: 5px auto; text-align: center;">Register an Account</h3>
                             <label>Username</label>
                             <input name="username" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
                             <br />
