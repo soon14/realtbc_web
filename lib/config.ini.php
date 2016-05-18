@@ -15,10 +15,10 @@
 	* Database Constants - these constants refer to 
 	* the database configuration settings. 
 	*/
-	 define('DB_SERVER', 'localhost'); 
-	 define('DB_USER', 'root'); 
-	 define('DB_PASS', ''); 
-	 define('DB_DATABASE', 'realtbc');
+	 define('DB_SERVER', '10.0.0.3'); 
+	 define('DB_USER', 'mcs'); 
+	 define('DB_PASS', 's9F!@S2Bz6R94F%&d5'); 
+	 define('DB_DATABASE', 'oregonrealm');
  
 	/** 
 	* Show MySql Errors. 
