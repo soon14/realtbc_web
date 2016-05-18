@@ -112,12 +112,18 @@
           					<input name="doLogin" type="hidden" value="1"> 
           				</form>
 		  					<?php print Filter::$showMsg;?>
-          					<p>Forgot your password? <a id="passreset">Recover it</a>.</p>
+          					<p>Forgot your password? <a href="#passresetModal">Recover it</a>.</p>
           					<p class="realmlist">set realmlist logon.realtbc.com</p>
 			     	</div>
-                    <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none;">
+                    
+				</div>
+            </div>
+<div id="passresetModal" class="modalDialog">
+            <div>
+            <a href="#close" title="Close" class="close">X</a>
+			<h4 style="color: #555; text-align: center;">Reset Password</h4>
+            <div id="passform" class="col-md-5 col-lg-4 login-container">
                     <form id="wojo_form" name="wojo_form" method="post">
-                    <h3 style="color: #303030; margin: 5px auto; text-align: center;">Password Reset</h3>
                     <label>Username</label>
                     <input name="uname" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
                     <br />
@@ -129,13 +135,12 @@
                     <div class="clearfix"><br>
                     <button data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button"><?php echo Core::$word->UA_PASS_RSUBMIT;?></button>
                     </div>
-                    <a id="backto"><?php echo Core::$word->UA_BLOGIN;?></a>
+                    <a href="#regModal"><?php echo Core::$word->UA_BLOGIN;?></a>
                     <input name="passReset" type="hidden" value="1">
                     </form>
-                    </div>
-				</div>
             </div>
-            
+            </div>
+            </div>
             <div id="createModal" class="modalDialog">
 			    <div>
                 	<a href="#close" title="Close" class="close">X</a>
