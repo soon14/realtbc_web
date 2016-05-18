@@ -122,7 +122,7 @@
             <div>
             <a href="#close" title="Close" class="close">X</a>
 			<h4 style="color: #555; text-align: center;">Reset Password</h4>
-            <div id="passform" class="col-md-5 col-lg-4 login-container">
+            <div id="loginform" class="col-md-5 col-lg-4 login-container">
                     <form id="wojo_form" name="wojo_form" method="post">
                     <label>Username</label>
                     <input name="uname" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
