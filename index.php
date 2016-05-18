@@ -115,7 +115,7 @@
           					<p>Forgot your password? <a id="passreset">Recover it</a>.</p>
           					<p class="realmlist">set realmlist logon.realtbc.com</p>
 			     	</div>
-                    <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none; padding-left:10px; padding-right:10px; height:360px;">
+                    <div id="passform" class="col-md-5 col-lg-4 login-container" style="display:none;">
                     <form id="wojo_form" name="wojo_form" method="post">
                     <h3 style="color: #303030; margin: 5px auto; text-align: center;">Password Reset</h3>
                     <label>Username</label>
