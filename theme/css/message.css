@@ -86,7 +86,7 @@
   top: 45%;
   right: 10px;
   min-width: 300px;
-  z-index: 9999;
+  z-index: 100000;
 }
 .wojo.message.notice {
   border-radius: .225em;
@@ -97,7 +97,7 @@
   cursor:pointer
 }
 .wojo.message.notice span {
-  font-family: 'Open Sans';
+  font-family: Segoe UI, Verdana, Geneva, sans-serif;
   font-size: .85em;
   text-transform: uppercase;
   font-weight:700;
@@ -118,8 +118,8 @@
   color: rgba(255,255,255,0.8)
 }
 .wojo.message.notice.success {
-  background-color: #3e4e5d;
-  color: #A0D468;
+  background-color: #FFF;
+  color: #A0D468 !important;
 }
 .wojo.message.notice.info {
   background-color: #3e4e5d;
@@ -182,7 +182,7 @@
   list-style-type: none;
   margin: 0 0 .3em 1em;
   padding: 0;
-  font-family: 'Open Sans';
+  font-family: Segoe UI, Verdana, Geneva, sans-serif;
 }
 .wojo.message ul.list li:before {
   position: absolute;
@@ -348,7 +348,7 @@
 .wojo.success.message,
 .wojo.positive.message {
   background-color: #a9d5be;
-  color: #3e7558;
+  color: #3e7558 !important;
 }
 .wojo.error.message,
 .wojo.negative.message {

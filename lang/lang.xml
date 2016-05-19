@@ -90,7 +90,7 @@
   <phrase section="Global" data="SUBMIT">Submit</phrase>
   <phrase section="Global" data="SUCCESS">Success</phrase>
   <phrase section="Global" data="SYSERROR">An error occurred while processing this request. Please contact administrator.</phrase>
-  <phrase section="Global" data="SYSTEM_ERR"></phrase>
+  <phrase section="Global" data="SYSTEM_ERR">Please complete the following fields:</phrase>
   <phrase section="Global" data="SYSTEM_PROCCESS">Nothing to process.</phrase>
   <phrase section="Global" data="TO">To</phrase>
   <phrase section="Global" data="TOAMT">Total Amount</phrase>
@@ -236,7 +236,7 @@
   <phrase section="Accounts" data="UA_LOGINNOW">Login Now</phrase>			
   <phrase section="Accounts" data="UA_MAX_LIMIT">We are sorry, maximum number of registered users have been reached.</phrase>			
   <phrase section="Accounts" data="UA_NO_MEMBERSHIP">No Membership</phrase>			
-  <phrase section="Accounts" data="UA_NOMORE_REG">Website account creation is currently disabled. Please join us on Discord and PM an Admin for a testing account!</phrase>			
+  <phrase section="Accounts" data="UA_NOMORE_REG">We are sorry, at this point we do not accept any more registrations.</phrase>			
   <phrase section="Accounts" data="UA_P_SUMMARY">Purchase Summary</phrase>
   <phrase section="Accounts" data="UA_P_PAYWITH">Pay With</phrase>			
   <phrase section="Accounts" data="UA_PASS_R_ERR">There was an error during the process. Please contact the administrator.</phrase>			
@@ -596,7 +596,7 @@ cron_job0days.php will automatically send emails to all users whose membership h
   <phrase section="User Management" data="UR_EMAIL_R">Please Enter Valid Email Address</phrase>
   <phrase section="User Management" data="UR_EMAIL_R1">Entered Email Address Is Already In Use.</phrase>
   <phrase section="User Management" data="UR_EMAIL_R2">Entered Email Address Is Not Valid.</phrase>
-  <phrase section="User Management" data="UR_EMAIL_R3">Entered Email Address Does Not Exists.</phrase>
+  <phrase section="User Management" data="UR_EMAIL_R3">Entered Email Address Does Not Exist.</phrase>
   <phrase section="User Management" data="UR_FAX">Fax</phrase>
   <phrase section="User Management" data="UR_FIND_UNAME">Search Username</phrase>
   <phrase section="User Management" data="UR_FNAME">First Name</phrase>
