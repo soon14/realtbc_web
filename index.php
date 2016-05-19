@@ -133,7 +133,7 @@
                     <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append" />
                     <input name="captcha" placeholder="<?php echo Core::$word->UA_PASS_RTOTAL;?>" type="text">
                     <div class="clearfix"><br>
-                    <button data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button"><?php echo Core::$word->UA_PASS_RSUBMIT;?></button>
+                    <input data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button" style="font-size: 15px;font-weight: bold;color: #259e33;margin-bottom:5px;margin-top:-7px;" value="Reset Password">
                     </div>
                     <a href="#regModal"><?php echo Core::$word->UA_BLOGIN;?></a>
                     <input name="passReset" type="hidden" value="1">
@@ -164,7 +164,7 @@
                             <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append">
                             <input type="text" placeholder="<?php echo Core::$word->UA_REG_RTOTAL;?>" name="captcha">      
                             <div class="clearfix content-center">
-                            <button data-url="/ajax/user.php" type="button" name="dosubmit2" class="wojo secondary button"><?php echo Core::$word->UA_REG_ACC;?></button>
+                            <input data-url="/ajax/user.php" type="button" name="dosubmit2" class="wojo button" style="margin-top:14px;margin-bottom:10px;font-size: 15px;font-weight: bold;color: #259e33;" value="Create Account">
                             </div>
                             <input name="doRegister" type="hidden" value="1">
                             </form>
@@ -544,6 +544,12 @@ $(document).ready(function () {
         $("#loginform").slideUp("slow");
         $("#regform").slideDown("slow");
     });
+	$("#wojoform").submit(function(e){
+    return false;
+});
+$("#wojoform2").submit(function(e){
+    return false;
+});
 });
 // ]]>
 </script>

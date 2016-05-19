@@ -32,7 +32,7 @@ $(document).ready(function() {
       });
 	  
 	/* == Master Form == */
-	$('body').on('click', 'button[name=dosubmit], .dosubmit', function() {
+	$('body').on('click', 'input[name=dosubmit], .dosubmit', function() {
 		var $parent = ($(this).is("button")) ? $(this).closest('.wojo.form') : $('.messi-content').find('.wojo.form');
 		var posturl = $(this).data('url');
 
@@ -62,7 +62,7 @@ $(document).ready(function() {
 
 		$('#wojo_form').ajaxForm(options).submit();
 	});
-	$('body').on('click', 'button[name=dosubmit2], .dosubmit', function() {
+	$('body').on('click', 'input[name=dosubmit2], .dosubmit', function() {
 		var $parent = ($(this).is("button")) ? $(this).closest('.wojo.form') : $('.messi-content').find('.wojo.form');
 		var posturl = $(this).data('url');
 
