@@ -399,7 +399,7 @@
 
               if (!Filter::$id)
                   $data['created'] = "NOW()";
-
+                  $data['expansion'] = "1";
               if (Filter::$id)
                   $userrow = Registry::get("Core")->getRowById(self::uTable, Filter::$id);
 
@@ -665,7 +665,7 @@
 				  }
 				  $data['custom_fields'] = $fielddata;
 			  }
-			  
+			  $data['expansion'] = "1";
               self::$db->insert(self::uTable, $data);
 
               require_once (BASEPATH . "lib/class_mailer.php");
