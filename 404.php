@@ -33,7 +33,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name=viewport content="width=device-width, initial-scale=1">
 
-   <title>RealTBC - Home</title>
+   <title>RealTBC - Error</title>
    <script type="text/javascript">
    var SITEURL = "<?php echo SITEURL; ?>";
    var ADMINURL = "<?php echo ADMINURL; ?>";
@@ -243,8 +243,7 @@
         </nav>
    		<center>
         <img src="assets/images/404.png" alt="404" />
-        <h2>Error 404</h2>
-        <h3>This page has been lost in the Twisting Nether.</h3>
+        <h2>Something went wrong</h2>
         <p class="fourohfour">There may have been a page here once, but it's gone now.</p>
         <br>
         </center>
