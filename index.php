@@ -1,22 +1,10 @@
 <?php
-  /**
-   * Index
-   *
-   * @package Membership Manager Pro
-   * @author wojoscripts.com
-   * @copyright 2015
-   * @version $Id: index.php, v3.00 2015-03-10 10:12:05 gewa Exp $
-   */
   define("_VALID_PHP", true);
   require_once("init.php");
-  
-  if ($user->logged_in)
-      redirect_to(SITEURL . "/account.php");
 	  
   if (isset($_POST['doLogin']))
       : $result = $user->login($_POST['username'], $_POST['password']);
-  
-  /* Login Successful */
+
   if ($result)
       : redirect_to("account.php");
   endif;
@@ -232,13 +220,26 @@
                </li>
             </ul>
         </div>
-        	<div class="col-md-3 nopadding">
+        	<? if ($user->logged_in) { ?>
+            <div class="col-md-3 nopadding">
+            	<ul id="nav" class="row nopadding cd-side-navigation">
+                <li class="col-xs-4 col-sm-6 nopadding menuitem green">
+                  <a href="account.php" class="hvr-underline-from-center"><i class="flaticon-paper40" style="padding-top:0px;"></i><span style="margin-top:-13px;">My Account</span></a>
+                </li>
+                <li class="col-xs-4 col-sm-6 nopadding menuitem red">
+                  <a href="logout.php" class="hvr-underline-from-center"><i class="flaticon-circle-3" style="padding-top:0px;"></i><span style="margin-top:-13px;">Logout</span></a>
+                </li>
+                </ul>
+            </div>
+            <? }else{ ?>
+            <div class="col-md-3 nopadding">
             	<div class="register">
             		<img class="regicon" src="assets/images/avatar.png" alt="" width="54px" height="54px" />
                     <p class="loginto"><a href="#regModal">Login</a> to personalize your visit and enhance your experience.</p>
                     <p class="loginlast">Don't have one? <a href="#createModal">Create One</a>.</p>
                 </div>
             </div>
+            <? } ?>
     </div>
         </nav>
         
@@ -668,12 +669,6 @@ $(document).ready(function () {
         $("#loginform").slideUp("slow");
         $("#regform").slideDown("slow");
     });
-	$("#wojoform").submit(function(e){
-    return false;
-});
-$("#wojoform2").submit(function(e){
-    return false;
-});
 });
 // ]]>
 </script>
