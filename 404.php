@@ -71,20 +71,21 @@
 
 </head>
 
-<img class="reallogo" src="assets/images/logo.png" alt="logo" />
-
-<div class="col-md-12 nopadding" style="/* float: right; */">
-  <div style="width: 225px; float: right;">
-    <div class="inline-block"><a href="https://www.facebook.com/Realtbc-1634787043427455/" target="_blank"><img class="mediaicon hvr-grow" src="assets/images/social/fb.png" alt=""></a></div>
-    <div class="inline-block"><a href="https://twitter.com/real_TBC" target="_blank"><img class="mediaicon hvr-grow" src="assets/images/social/twit.png" alt=""></a></div>
-    <div class="inline-block"><a href="#!"><img class="mediaicon hvr-grow" src="assets/images/social/yt.png" alt=""></a></div>
-	</div>
-</div>
+<div class="reallogo"></div>
+<div class="illidan"></div>
 
 <div class="clear"></div>
 
 <body class="boxed">
 <div class="global">
+
+<div class="socialicons">
+	<ul>
+		<li><a href="https://www.facebook.com/Realtbc-1634787043427455/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="https://twitter.com/real_TBC" target="_blank"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+	</ul>
+</div>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -210,25 +211,25 @@
    <section id="top-navigation" class="container-fluid nopadding">
                			<nav>
         <div class="col-md-12 nopadding">
-            <div class="col-md-9 nopadding">
+			<div class="col-md-9 nopadding">
                <ul id="nav" class="row nopadding cd-side-navigation">
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="index.php" class="hvr-underline-from-center"><i class="flaticon-insignia"></i><span>home</span></a>
+                  <a href="index.php" class="hvr-underline-from-center"><i class="fa fa-globe"></i><span>home</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="http://forums.realtbc.com" target="_blank" class="hvr-underline-from-center"><i class="flaticon-profile5"></i><span>Forum</span></a>
+                  <a href="http://forums.realtbc.com" target="_blank" class="hvr-underline-from-center"><i class="fa fa-comments-o"></i><span>Forum</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="https://discord.gg/0xjzBRRX754v5hLp" target="_blank" class="hvr-underline-from-center"><i class="flaticon-earphones18"></i><span>Discord</span></a>
+                  <a href="https://discord.gg/0xjzBRRX754v5hLp" target="_blank" class="hvr-underline-from-center"><i class="fa fa-headphones"></i><span>Discord</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="https://github.com/antisocial89/realtbc_issues/issues" target="_blank" class="hvr-underline-from-center"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
+                  <a href="https://github.com/antisocial89/realtbc_issues/issues" target="_blank" class="hvr-underline-from-center"><i class="fa fa-exclamation"></i><span>Bug Tracker</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="#errorModal" class="hvr-underline-from-center"><i class="flaticon-arrows-4"></i><span>Connect</span></a>
+                  <a href="#errorModal" class="hvr-underline-from-center"><i class="fa fa-plug"></i><span>Connect</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="#errorModal" class="hvr-underline-from-center"><i class="flaticon-circle-5"></i><span>Support</span></a>
+                  <a href="#errorModal" class="hvr-underline-from-center"><i class="fa fa-shield"></i><span>Armory</span></a>
                </li>
             </ul>
         </div>
