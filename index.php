@@ -72,7 +72,7 @@
 </head>
 
 <div class="reallogo"></div>
-<div class="illidan"></div>
+<div class="illidan"><</div>
 
 <div class="clear"></div>
 
@@ -343,7 +343,7 @@
             <ul>
                <li><a href="#all" data-filter="*">All Featured</a></li>
                <li><a href="#dar" data-filter=".dar">Dungeon & Raid</a></li>
-               <!-- <li><a href="#quests" data-filter=".quests">Quests</a></li> -->
+               <li><a href="#quests" data-filter=".quests">Quests</a></li>
             </ul>
          </div>
 
@@ -368,6 +368,48 @@
                               </div>
                               <div class="post-tag pull-left">
                                  <span><a href="#dar" data-filter=".dar">Dungeon & Raid</a></span><span>
+                              </div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  
+                    <div class="grid-item grid-sizer dar col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                           <div class="popup-call">
+                              <a href="#errorModal" class="gallery-item"><i class="flaticon-youtube33"></i></a>
+                           </div>
+                           <img src="assets/custom/images/blog/thumbs/02.jpg" class="img-responsive" alt="img03"/>
+                           <figcaption>
+                              <div class="post-header">
+                                 <h5><a href="blogpost.html">Coming Soon</a></h5>
+                              </div>
+                              <div class="post-entry">
+                              </div>
+                              <div class="post-tag pull-left">
+                                 <span><a href="#dar" data-filter=".dar">Dungeon & Raid</a></span>
+                              </div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  
+                  <div class="grid-item quests col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                           <div class="popup-call">
+                              <a href="#errorModal" class="gallery-item"><i class="flaticon-youtube33"></i></a>
+                           </div>
+                           <img src="assets/custom/images/blog/thumbs/02.jpg" class="img-responsive" alt="img11"/>
+                           <figcaption>
+                              <div class="post-header">
+                                 <h5><a href="blogpost.html">Coming Soon</a></h5>
+                              </div>
+                              <div class="post-entry">
+                              </div>
+                              <div class="post-tag pull-left">
+                                 <span><a href="#quests" data-filter=".quest">Quests</a></span>
                               </div>
                            </figcaption>
                         </figure>
@@ -508,7 +550,7 @@
                      <div class="timeline-photo timeline-bg01-01"></div>
                      <div class="timeline-heading">
                         <h3 class="font-accident-two-normal uppercase">Dark Portal Opens | Patch 2.0.3</h3>
-                        <h6 class="uppercase">The Dark Portal Opens is the world event sparked with patch 2.0.3, immediately preceding the release of World of Warcraft: The Burning Crusade where the Dark Portal reopened.</h6>
+                        <h6 class="uppercase dark">The Dark Portal Opens is the world event sparked with patch 2.0.3, immediately preceding the release of World of Warcraft: The Burning Crusade where the Dark Portal reopened.</h6>
                      </div>
                   </div>
                </li>
@@ -519,7 +561,7 @@
                      <div class="timeline-photo timeline-bg02-01"></div>
                      <div class="timeline-heading">
                         <h3 class="font-accident-two-normal uppercase">The Black Temple | Patch 2.1</h3>
-                        <h6 class="uppercase">The Black Temple is the fortress-citadel of Illidan Stormrage, Lord of Outland. It was once known as the Temple of Karabor, and has changed hands many times over the generations.</h6>
+                        <h6 class="uppercase dark">The Black Temple is the fortress-citadel of Illidan Stormrage, Lord of Outland. It was once known as the Temple of Karabor, and has changed hands many times over the generations.</h6>
                      </div>
                   </div>
                </li>
@@ -530,7 +572,7 @@
                      <div class="timeline-photo timeline-bg03-01"></div>
                      <div class="timeline-heading">
                         <h3 class="font-accident-two-normal uppercase">The Gods of Zul'Aman | Patch 2.3</h3>
-                        <h6 class="uppercase">The stronghold of Zul'Aman has stood for millennia as the Amani trolls' seat of power and bastion of the fearless, cunning warlord Zul'jin.</h6>
+                        <h6 class="uppercase dark">The stronghold of Zul'Aman has stood for millennia as the Amani trolls' seat of power and bastion of the fearless, cunning warlord Zul'jin.</h6>
                      </div>
                   </div>
                </li>
@@ -541,7 +583,7 @@
                      <div class="timeline-photo timeline-bg04-01"></div>
                      <div class="timeline-heading">
                         <h3 class="font-accident-two-normal uppercase">Fury of the Sunwell | Patch 2.4</h3>
-                        <h6 class="uppercase">The glorious fount of arcane energy known as the Sunwell empowered the high elves for millennia, until the death knight Arthas laid siege to the elven kingdom and corrupted its sacred energies. Seeing no other alternative, a band of survivors led by Prince Kael'thas destroyed the ancient fount. Over time the surviving elves fell prey to a crippling magical withdrawal.</h6>
+                        <h6 class="uppercase dark">The glorious fount of arcane energy known as the Sunwell empowered the high elves for millennia, until the death knight Arthas laid siege to the elven kingdom and corrupted its sacred energies. Seeing no other alternative, a band of survivors led by Prince Kael'thas destroyed the ancient fount. Over time the surviving elves fell prey to a crippling magical withdrawal.</h6>
                      </div>
                   </div>
                </li>

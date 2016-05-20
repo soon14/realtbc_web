@@ -1463,6 +1463,10 @@ button, input, select, textarea {
   background-size: cover;
 }
 
+.dark {
+	color: #232323;
+}
+
 /* Counts Block */
 .bg-light .counts {
   color: #f2f2f2; }
@@ -2031,7 +2035,7 @@ figure.effect-goliath {
       color: #8e8e8e;
       text-transform: none; }
       #blog .item-wrap figure figcaption a {
-        color: #259e33; }
+        color: #232323; }
         #blog .item-wrap figure figcaption a:hover, #blog .item-wrap figure figcaption a:focus {
           color: #297600;
           text-decoration: none; }
