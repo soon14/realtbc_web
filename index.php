@@ -220,7 +220,7 @@
                </li>
             </ul>
         </div>
-        	<? if ($user->logged_in) { ?>
+        	<?php if ($user->logged_in) { ?>
             <div class="col-md-3 nopadding">
             	<ul id="nav" class="row nopadding cd-side-navigation">
                 <li class="col-xs-4 col-sm-6 nopadding menuitem green">
@@ -231,7 +231,7 @@
                 </li>
                 </ul>
             </div>
-            <? }else{ ?>
+            <?php }else{ ?>
             <div class="col-md-3 nopadding">
             	<div class="register">
             		<img class="regicon" src="assets/images/avatar.png" alt="" width="54px" height="54px" />
@@ -239,7 +239,7 @@
                     <p class="loginlast">Don't have one? <a href="#createModal">Create One</a>.</p>
                 </div>
             </div>
-            <? } ?>
+            <?php } ?>
     </div>
         </nav>
         
