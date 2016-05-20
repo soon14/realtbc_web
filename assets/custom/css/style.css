@@ -476,6 +476,10 @@ body {
     margin: 10px;
 }
 
+.clear {
+	clear: both;
+}
+
 .clearfix:after {
   content: ".";
   visibility: hidden;
@@ -1645,10 +1649,10 @@ button, input, select, textarea {
     border-color: #fff transparent; }
   .port-filter-light ul li a:hover, .port-filter-light ul li a:focus {
     text-decoration: none;
-    background: #e74c3c;
+    background: #259e33;
     color: #f2f2f2; }
   .port-filter-light ul li a:hover:after, .port-filter-light ul li a:focus:after {
-    border-color: #e74c3c transparent;
+    border-color: #259e33 transparent;
     opacity: 1; }
 
 /* Portfolio hover */
@@ -2026,9 +2030,9 @@ figure.effect-goliath {
       color: #8e8e8e;
       text-transform: none; }
       #blog .item-wrap figure figcaption a {
-        color: #404040; }
+        color: #259e33; }
         #blog .item-wrap figure figcaption a:hover, #blog .item-wrap figure figcaption a:focus {
-          color: #e74c3c;
+          color: #297600;
           text-decoration: none; }
       #blog .item-wrap figure figcaption .post-meta {
         text-transform: uppercase;
@@ -2369,6 +2373,10 @@ label {
 	border: 1px solid #fff;
 }
 
+button {
+	height: 10px;
+}
+
 input[type=submit] {
 	margin-top: 15px;
 	font-size: 15px;
@@ -2549,10 +2557,16 @@ nav {
 
 /* social media */
 
+.socialmedia {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 1200px;
+}
+
 .mediaicon {
-	left: 1000px;
-	position: relative;
 	margin-left: 20px;
+	float: right;
 }
 
 .hvr-grow {
@@ -2573,3 +2587,6 @@ nav {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+/* Featured */
+

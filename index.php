@@ -73,11 +73,15 @@
 
 <img class="reallogo" src="assets/images/logo.png" alt="logo" />
 
-<div class="socialmedia">
-	<div class="inline-block"><a href="https://www.facebook.com/Realtbc-1634787043427455/" target="_blank"><img class="mediaicon hvr-grow" src="assets/images/social/fb.png" alt="" /></a></div>
-    <div class="inline-block"><a href="https://twitter.com/real_TBC" target="_blank"><img class="mediaicon hvr-grow" src="assets/images/social/twit.png" alt="" /></a></div>
-    <div class="inline-block"><a href="#!"><img class="mediaicon hvr-grow" src="assets/images/social/yt.png" alt="" /></a></div>
+<div class="col-md-12 nopadding" style="/* float: right; */">
+  <div style="width: 225px; float: right;">
+    <div class="inline-block"><a href="https://www.facebook.com/Realtbc-1634787043427455/" target="_blank"><img class="mediaicon hvr-grow" src="assets/images/social/fb.png" alt=""></a></div>
+    <div class="inline-block"><a href="https://twitter.com/real_TBC" target="_blank"><img class="mediaicon hvr-grow" src="assets/images/social/twit.png" alt=""></a></div>
+    <div class="inline-block"><a href="#!"><img class="mediaicon hvr-grow" src="assets/images/social/yt.png" alt=""></a></div>
+	</div>
 </div>
+
+<div class="clear"></div>
 
 <body class="boxed">
 <div class="global">
@@ -94,6 +98,16 @@
 
 <!--Pre-Loader-->
 <div id="preloader"></div>
+
+<div id="errorModal" class="modalDialog">
+			    <div>
+                	<a href="#close" title="Close" class="close">X</a>
+			        <h4 style="color: #555; text-align: center;">We're sorry about that</h4>
+                    <div id="loginform" class="col-md-5 col-lg-4 login-container">
+						<p>This feature is currently under construction.</p>
+                    </div>
+				</div>
+            </div>
 
 <div id="regModal" class="modalDialog">
 			    <div>
@@ -197,7 +211,7 @@
             <div class="col-md-9 nopadding">
                <ul id="nav" class="row nopadding cd-side-navigation">
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="http://realtbc.com" class="hvr-underline-from-center"><i class="flaticon-insignia"></i><span>home</span></a>
+                  <a href="index.php" class="hvr-underline-from-center"><i class="flaticon-insignia"></i><span>home</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
                   <a href="http://forums.realtbc.com" target="_blank" class="hvr-underline-from-center"><i class="flaticon-profile5"></i><span>Forum</span></a>
@@ -206,13 +220,13 @@
                   <a href="https://discord.gg/0xjzBRRX754v5hLp" target="_blank" class="hvr-underline-from-center"><i class="flaticon-earphones18"></i><span>Discord</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="https://github.com/antisocial89/RealTBC_Issue_tracker/issues" target="_blank" class="hvr-underline-from-center"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
+                  <a href="https://github.com/antisocial89/realtbc_issues/issues" target="_blank" class="hvr-underline-from-center"><i class="flaticon-placeholders4"></i><span>Bug Tracker</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="#openModal" class="hvr-underline-from-center"><i class="flaticon-arrows-4"></i><span>Connect</span></a>
+                  <a href="#errorModal" class="hvr-underline-from-center"><i class="flaticon-arrows-4"></i><span>Connect</span></a>
                </li>
                <li class="col-xs-4 col-sm-2 nopadding menuitem green">
-                  <a href="http://realtbc.com/support" class="hvr-underline-from-center"><i class="flaticon-circle-5"></i><span>Support</span></a>
+                  <a href="#errorModal" class="hvr-underline-from-center"><i class="flaticon-circle-5"></i><span>Support</span></a>
                </li>
             </ul>
         </div>
@@ -311,10 +325,76 @@
           </div>
           
           <div class="row nopadding">
+          
+           <div class="col-md-12 nopadding">
+           
+           <h3 class="font-accident-two-normal uppercase fontcolor-invert" style="text-align: center;">Featured Fixes</h3>
+           
+           <div class="content-wrap">
+
+   <div id="blog" class="inner-content">
+
+      <!-- Blog Block -->
+      <section class="inner-section">
+
+         <div id="isotope-filters" class="port-filter port-filter-light text-center wow fadeInLeft" data-wow-delay="0.6s" data-wow-offset="10">
+            <ul>
+               <li><a href="#all" data-filter="*">All Featured</a></li>
+               <li><a href="#dar" data-filter=".dar">Dungeon & Raid</a></li>
+               <!-- <li><a href="#quests" data-filter=".quests">Quests</a></li> -->
+            </ul>
+         </div>
+
+         <div class="dividewhite3"></div>
+
+         <div class="grid container-fluid text-center wow fadeInDown" data-wow-delay="0.6s" data-wow-offset="10">
+
+            <div id="posts" class="row popup-container">
+
+                  <div class="grid-item dar design col-md-4 col-sm-6">
+                     <div class="item-wrap">
+                        <figure class="">
+                           <div class="popup-call">
+                              <a href="#errorModal"><i class="flaticon-youtube33"></i></a>
+                           </div>
+                           <img src="assets/custom/images/blog/thumbs/01.jpg" class="img-responsive" alt="img11"/>
+                           <figcaption>
+                              <div class="post-header">
+                                 <h5><a href="blogpost.html">Hellfire Ramparts Revamped</a></h5>
+                              </div>
+                              <div class="post-entry">
+                              </div>
+                              <div class="post-tag pull-left">
+                                 <span><a href="#dar" data-filter=".dar">Dungeon & Raid</a></span><span>
+                              </div>
+                           </figcaption>
+                        </figure>
+                     </div>
+                  </div>
+                  
+				</div>
+            </div>
+
+         <div class="dividewhite8"></div>
+
+      </section>
+      <!-- /Blog Block -->
+
+   </div>
+
+</div>
+
+		   <div class="clear"></div>
+           
+           </div>
+           
+          </div>
+          
+          <div class="row nopadding">
 
          <div class="col-md-12 circle-skills nopadding height-400">
-            <div class="padding-50 wow fadeInLeft" data-wow-delay="0.6s" data-wow-offset="5" style="margin-left: 50px;">
-               <h3 class="font-accident-two-normal uppercase fontcolor-invert" style="text-align: center; margin-left: -55px;">Development Progress</h3>
+            <div class="padding-50 wow fadeInDown" data-wow-delay="0.6s" data-wow-offset="5" style="margin-left: 60px; margin-top: -40px;">
+               <h3 class="font-accident-two-normal uppercase fontcolor-invert" style="text-align: center; margin-left: -60px;">Development Progress</h3>
                <div class="row">
                   <div class="col-sm-4 nopadding">
                      <div class="progressbar" data-animate="false">
@@ -475,12 +555,12 @@
          <div class="col-md-6 cv-link">
             <h4 class="font-accident-two-normal uppercase">Navigation</h4>
             <div class="dividewhite1"></div>
-            <a class="uppercase" href="index.html">Home</a>
-            <a class="uppercase" href="#openModal">Forum</a>
+            <a class="uppercase" href="index.php">Home</a>
+            <a class="uppercase" href="https://forums.realtbc.com/">Forum</a>
             <a class="uppercase" href="https://discord.gg/0xjzBRRX756aJzQc">Discord</a>
-            <a class="uppercase" href="https://github.com/antisocial89/RealTBC_Issue_tracker/issues">Bug Tracker</a>
-            <a class="uppercase" href="#openModal">Connect</a>
-            <a class="uppercase" href="#openModal">Support</a>
+            <a class="uppercase" href="https://github.com/antisocial89/realtbc_issues/issues">Bug Tracker</a>
+            <a class="uppercase" href="#errorModal">Connect</a>
+            <a class="uppercase" href="#errorModal">Support</a>
             <div class="divider-dynamic"></div>
          </div>
          <div class="col-md-3 social-alignment">
