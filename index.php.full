@@ -1,3 +1,15 @@
+<?php
+  define("_VALID_PHP", true);
+  require_once("init.php");
+	  
+  if (isset($_POST['doLogin']))
+      : $result = $user->login($_POST['username'], $_POST['password']);
+
+  if ($result)
+      : redirect_to("account.php");
+  endif;
+  endif;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!--[if IE 9]>
@@ -10,8 +22,11 @@
    <meta name=viewport content="width=device-width, initial-scale=1">
 
    <title>RealTBC - Home</title>
-
-  <link rel="icon" href="assets/custom/images/favicon.ico" sizes="16x16" type="image/png">
+   <script type="text/javascript">
+   var SITEURL = "<?php echo SITEURL; ?>";
+   var ADMINURL = "<?php echo ADMINURL; ?>";
+   </script>
+    <link rel="icon" href="assets/custom/images/favicon.ico" sizes="16x16" type="image/png">
 
 	<meta name="description" content="RealTBC Private Server - Start at level 60, a full set of level gear, epic mount, and all skills. Join and enjoy a 'real' TBC experience!">
 	<meta name="keywords" content="RealTBC, TBC, Burning Crusade, WoW, World of Warcraft, Private Server, Instant 60, Starting Gear, Epic Mount, Start With All Spells, Scripted Raids, Working Battlegrounds, Battlegrounds, BG, Battleground, Working Arenas, Arenas, Arena, Blizzlike, Blizzlike Content">
@@ -24,7 +39,10 @@
    <link href="assets/vendor/hover/css/hover-min.css"                property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
    <link href="assets/vendor/wow/animate.css"                        property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
    <link href="assets/vendor/mfp/css/magnific-popup.css"             property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
-   <link href="theme/css/message.css"                                property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
+   <link rel="stylesheet" href="theme/css/message.css" type="text/css" />
+   <!-- Remove this for disable demo panel styles -->
+   <!--<link href="assets/vendor/styleselector/styleselector.css"        property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>-->
+   <!-- Custom styles -->
    <link href="assets/custom/css/style.css"                          property='stylesheet' rel="stylesheet" type="text/css" media="screen"/>
 
    <style>
@@ -86,21 +104,22 @@
                 	<a href="#close" title="Close" class="close">X</a>
 			        <h4 style="color: #555; text-align: center;">Account Management</h4>
 			        <div id="loginform" class="col-md-5 col-lg-4 login-container">
-          				<form method="post" id="login_form" name="login_form">
+          				<form method="post" id="login_form" name="login_form"> 
           					<label>Username</label>
-         					<input name="username" placeholder="Username" type="text">
+         					<input name="username" placeholder="Username" type="text"> 
           						<br />
           					<label>Password</label>
-          					<input name="password" placeholder="Password" type="password">
-         						<div class="clearfix">
+          					<input name="password" placeholder="Password" type="password">  
+         						<div class="clearfix"> 
           					<input name="submit" type="submit" value="Login">
-          						</div>
-          					<input name="doLogin" type="hidden" value="1">
+          						</div> 
+          					<input name="doLogin" type="hidden" value="1"> 
           				</form>
+		  					<?php print Filter::$showMsg;?>
           					<p>Forgot your password? <a href="#passresetModal">Recover it</a>.</p>
           					<p class="realmlist">set realmlist logon.realtbc.com</p>
 			     	</div>
-
+                    
 				</div>
             </div>
 <div id="passresetModal" class="modalDialog">
@@ -110,17 +129,17 @@
             <div id="loginform" class="col-md-5 col-lg-4 login-container">
                     <form id="wojo_form" name="wojo_form" method="post">
                     <label>Username</label>
-                    <input name="uname" placeholder="Username" type="text">
+                    <input name="uname" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
                     <br />
                     <label>Email</label>
-                    <input name="email" placeholder="Email Address" type="text">
+                    <input name="email" placeholder="<?php echo Core::$word->UR_EMAIL;?>" type="text">
                     <br />
-                    <label>Captcha Code</label><img src="" alt="" class="captcha-append" />
-                    <input name="captcha" placeholder="" type="text">
+                    <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append" />
+                    <input name="captcha" placeholder="<?php echo Core::$word->UA_PASS_RTOTAL;?>" type="text">
                     <div class="clearfix"><br>
-                    <input data-url="" type="button" name="dosubmit" class="wojo button" style="font-size: 15px;font-weight: bold;color: #259e33;margin-bottom:5px;margin-top:-7px;" value="Reset Password"> <!-- data-url="/ajax/user.php" -->
+                    <input data-url="/ajax/user.php" type="button" name="dosubmit" class="wojo button" style="font-size: 15px;font-weight: bold;color: #259e33;margin-bottom:5px;margin-top:-7px;" value="Reset Password">
                     </div>
-                    <a href="#regModal">Login</a>
+                    <a href="#regModal"><?php echo Core::$word->UA_BLOGIN;?></a>
                     <input name="passReset" type="hidden" value="1">
                     </form>
             </div>
@@ -131,27 +150,33 @@
                 	<a href="#close" title="Close" class="close">X</a>
 			        <h4 style="color: #555; text-align: center;">Account Creation</h4>
 			        <div id="loginform" class="col-md-5 col-lg-4 login-container">
+          					<?php if(!$core->reg_allowed):?>
+                            <?php echo Filter::msgSingleAlert(Core::$word->UA_NOMORE_REG);?>
+                            <?php elseif($core->user_limit !=0 and $core->user_limit == countEntries(Users::uTable)):?>
+                            <?php echo Filter::msgSingleAlert(Core::$word->UA_MAX_LIMIT);?>
+                            <?php else:?>
                             <form id="wojo_form2" name="wojo_form" method="post">
                             <label>Username</label>
-                            <input name="username" placeholder="Username" type="text">
+                            <input name="username" placeholder="<?php echo Core::$word->USERNAME;?>" type="text">
                             <br />
                             <label>Password</label>
-                            <input name="pass" placeholder="Password" type="password">
+                            <input name="pass" placeholder="<?php echo Core::$word->PASSWORD;?>" type="password">
                             <br />
                             <label>Email</label>
-                            <input name="email" placeholder="Email Address" type="text">
+                            <input name="email" placeholder="<?php echo Core::$word->UR_EMAIL;?>" type="text">
                             <br />
-                            <label>Captcha Code</label><img src="" alt="" class="captcha-append">
-                            <input type="text" placeholder="" name="captcha">
+                            <label>Captcha Code</label><img src="<?php echo SITEURL;?>/lib/captcha.php" alt="" class="captcha-append">
+                            <input type="text" placeholder="<?php echo Core::$word->UA_REG_RTOTAL;?>" name="captcha">      
                             <div class="clearfix content-center">
-                            <input data-url="" type="button" name="dosubmit2" class="wojo button" style="margin-top:14px;margin-bottom:10px;font-size: 15px;font-weight: bold;color: #259e33;" value="Create Account"> <!-- data-url="/ajax/user.php" -->
+                            <input data-url="/ajax/user.php" type="button" name="dosubmit2" class="wojo button" style="margin-top:14px;margin-bottom:10px;font-size: 15px;font-weight: bold;color: #259e33;" value="Create Account">
                             </div>
                             <input name="doRegister" type="hidden" value="1">
                             </form>
+                            <?php endif;?>
 			     	</div>
 				</div>
             </div>
-
+            
             <div id="applyModal" class="modalDialog">
 			    <div>
                 	<a href="#close" title="Close" class="close">X</a>
@@ -195,6 +220,18 @@
                </li>
             </ul>
         </div>
+        	<?php if ($user->logged_in) { ?>
+            <div class="col-md-3 nopadding">
+            	<ul id="nav" class="row nopadding cd-side-navigation">
+                <li class="col-xs-4 col-sm-6 nopadding menuitem green">
+                  <a href="account.php" class="hvr-underline-from-center"><i class="flaticon-paper40" style="padding-top:0px;"></i><span style="margin-top:-13px;">My Account</span></a>
+                </li>
+                <li class="col-xs-4 col-sm-6 nopadding menuitem red">
+                  <a href="logout.php" class="hvr-underline-from-center"><i class="flaticon-circle-3" style="padding-top:0px;"></i><span style="margin-top:-13px;">Logout</span></a>
+                </li>
+                </ul>
+            </div>
+            <?php }else{ ?>
             <div class="col-md-3 nopadding">
             	<div class="register">
             		<img class="regicon" src="assets/images/avatar.png" alt="" width="54px" height="54px" />
@@ -202,9 +239,10 @@
                     <p class="loginlast">Don't have one? <a href="#createModal">Create One</a>.</p>
                 </div>
             </div>
+            <?php } ?>
     </div>
         </nav>
-
+        
         <div class="col-md-12 nopadding">
             <div class="row nopadding">
             <div class="row nopadding">
@@ -256,20 +294,45 @@
                     <div class="col-md-12 fullwidth padding-40 wow fadeInDown" data-wow-delay="0.2s" data-wow-offset="10">
                       <div class="row nopadding">
                         <h3 class="font-accident-two-normal uppercase" style="color: #303030;">Announcements</h3>
+                        	<?php 
+                          	$feed_url = 'http://forums.realtbc.com/index.php?forums/announcements.2/index.rss'; 
+                          	$xml_data = simplexml_load_file($feed_url);
 
+                          	$i=0; 
+                          	foreach($xml_data->channel->item as $ritem) { 
+
+                          	$e_title       = (string)$ritem->title; 
+                          	$e_link        = (string)$ritem->link; 
+                          	$e_pubDate     = (string)$ritem->pubDate; 
+                          	$e_author      = (string)$ritem->author;
+                          	$e_content     = $ritem->children("content", true);
+                          	$e_encoded     = (string)$e_content->encoded; 
+                            $description   = substr($e_encoded, 0, 350).'<a style="font-weight: bold;" href="' . $e_link . '"> ...Read More</a>';
+
+                          	$n = ($i+1);
+                          	print "\n"; 
+                          	print '<h5 class="font-accident-one-bold hovercolor uppercase" style="margin-bottom: 5px;"><a href="' . $e_link . '">'. $e_title .'</a></h2>'."\n"; 
+                  			print '<p class="date" style="margin: 0px;">'. str_replace('+0000', '', $e_pubDate) .'</p>'."\n"; 
+                          	print '<p style="margin: 0px;"> <strong>By '. str_replace('invalid@example.com', '', $e_author) .'</strong></p>'."\n"; 
+                          	print '<p class="small" style="margin-top: 5px; padding-bottom: 5px;">'. $description .'</p>'."\n"; 
+
+                          	$i++; 
+                          	}
+							
+                          	?>
                       </div>
                     </div>
                   </div>
                 </div>
              </div>
           </div>
-
+          
           <div class="row nopadding">
-
+          
            <div class="col-md-12 nopadding">
-
+           
            <h3 class="font-accident-two-normal uppercase fontcolor-invert" style="text-align: center;">Featured Fixes</h3>
-
+           
            <div class="content-wrap">
 
    <div id="blog" class="inner-content">
@@ -311,7 +374,7 @@
                         </figure>
                      </div>
                   </div>
-
+                  
                     <div class="grid-item grid-sizer dar col-md-4 col-sm-6">
                      <div class="item-wrap">
                         <figure class="">
@@ -332,7 +395,7 @@
                         </figure>
                      </div>
                   </div>
-
+                  
                   <div class="grid-item quests col-md-4 col-sm-6">
                      <div class="item-wrap">
                         <figure class="">
@@ -353,7 +416,7 @@
                         </figure>
                      </div>
                   </div>
-
+                  
 				</div>
             </div>
 
@@ -367,11 +430,11 @@
 </div>
 
 		   <div class="clear"></div>
-
+           
            </div>
-
+           
           </div>
-
+          
           <div class="row nopadding">
 
          <div class="col-md-12 circle-skills nopadding height-400">
@@ -470,7 +533,7 @@
             </div>
          </div>
    </section>
-
+   
    <section id="timeline-vertical" class="inner-section">
 
          <div class="container-fluid nopadding timeline-background">
@@ -530,7 +593,7 @@
          </div>
 
       </section>
-
+      
       <footer class="padding-50">
    <div class="container-fluid nopadding">
       <div class="row wow fadeInDown" data-wow-delay=".2s" data-wow-offset="10">
@@ -563,7 +626,7 @@
       </div>
    </div>
 </footer>
-
+   
 </div>
 
 </header>
@@ -585,6 +648,9 @@
 <script src="assets/vendor/anicounter/jquery.counterup.min.js"       type="text/javascript"></script>
 <script src="assets/vendor/wow/wow.min.js"                           type="text/javascript"></script>
 <script src="assets/vendor/pjax/jquery.pjax.js"                      type="text/javascript"></script>
+<!-- Remove this for disable demo panel script -->
+<!--<script src="assets/vendor/styleselector/styleselector.js"           type="text/javascript"></script>-->
+<!-- Custom scripts -->
 <script src="assets/custom/js/custom.js"                             type="text/javascript"></script>
 <script src="assets/js/global.js"></script>
 <script src="theme/js/master.js"></script>
